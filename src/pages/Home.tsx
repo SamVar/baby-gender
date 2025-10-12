@@ -7,29 +7,29 @@ import { Calendar, Baby, Info } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+      <header className="container mx-auto px-4 py-8 relative">
+        <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
+          <Link to="/about" aria-label="About">
+            <Info className="h-5 w-5" />
+          </Link>
+        </Button>
+        
+        <div className="text-center space-y-4 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Baby Gender Planner
           </h1>
-          <p className="text-sm text-muted-foreground">Plan or predict using blood freshness cycles</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/about" aria-label="About">
-              <Info className="h-5 w-5" />
-            </Link>
-          </Button>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Use cyclical blood freshness peaks to plan your ideal conception dates or predict your baby's gender
+          </p>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center space-y-3 animate-fade-in">
-            <h2 className="text-4xl font-bold">Choose Your Method</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Use cyclical blood freshness peaks to plan your ideal conception dates or predict your baby's gender
-            </p>
+          <div className="text-center space-y-3">
+            <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
+              Choose Your Method
+            </span>
             <p className="text-xs text-muted-foreground italic">
               ✨ For entertainment only
             </p>
