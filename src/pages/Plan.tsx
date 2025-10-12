@@ -105,7 +105,7 @@ export default function Plan() {
 
               {hasInputs && (
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">Desired Gender & Calculate</label>
+                  <label className="text-sm font-medium">Desired Gender</label>
                   <div className="flex gap-3">
                     <Button
                       variant={targetSex === 'boy' ? 'default' : 'outline'}
@@ -127,15 +127,18 @@ export default function Plan() {
                     >
                       Girl
                     </Button>
-                    <Button 
-                      onClick={handleCalculate} 
-                      size="lg" 
-                      className="flex-1"
-                    >
-                      Calculate Best Dates
-                    </Button>
                   </div>
                 </div>
+              )}
+
+              {hasInputs && (
+                <Button 
+                  onClick={handleCalculate} 
+                  size="lg" 
+                  className="w-full"
+                >
+                  Calculate Best Dates
+                </Button>
               )}
             </CardContent>
           </Card>
