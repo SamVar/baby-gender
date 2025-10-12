@@ -17,8 +17,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         boy: "bg-boy/10 text-boy border border-boy/30 hover:bg-boy/20 hover:border-boy/50 transition-all",
         girl: "bg-girl/10 text-girl border border-girl/30 hover:bg-girl/20 hover:border-girl/50 transition-all",
-        boySelected: "bg-boy/20 text-boy border-2 border-boy hover:bg-boy/30 shadow-lg shadow-boy/20 transition-all",
-        girlSelected: "bg-girl/20 text-girl border-2 border-girl hover:bg-girl/30 shadow-lg shadow-girl/20 transition-all",
+        boySelected: "bg-boy text-white border-2 border-boy hover:bg-boy/90 shadow-lg shadow-boy/30 transition-all font-semibold",
+        girlSelected: "bg-girl text-white border-2 border-girl hover:bg-girl/90 shadow-lg shadow-girl/30 transition-all font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
