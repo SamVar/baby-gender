@@ -101,7 +101,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <Button variant="ghost" asChild>
-              <Link to="/about" className="text-muted-foreground hover:text-primary">
+              <Link to="/about" className="text-muted-foreground hover:text-primary-foreground">
                 Learn how it works →
               </Link>
             </Button>
