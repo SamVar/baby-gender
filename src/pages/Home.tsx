@@ -26,7 +26,7 @@ export default function Home() {
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center space-y-3">
+          <div className="text-center space-y-2">
             <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
               Choose Your Method
             </span>
@@ -100,8 +100,8 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button variant="ghost" asChild>
-              <Link to="/about" className="text-muted-foreground hover:text-primary">
+            <Button variant="ghost" asChild className="hover:text-primary-foreground">
+              <Link to="/about">
                 Learn how it works →
               </Link>
             </Button>
