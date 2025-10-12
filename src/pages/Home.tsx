@@ -15,7 +15,7 @@ export default function Home() {
         </Button>
         
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-4">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-3">
             <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
