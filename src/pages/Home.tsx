@@ -80,7 +80,7 @@ export default function Home() {
                   Predict
                 </CardTitle>
                 <CardDescription className="text-base">
-                  Already pregnant? Estimate the probability of boy vs girl based on conception date.
+                  Already pregnant ? Estimate the probability of boy vs girl based on conception date.
                 </CardDescription>
               </CardHeader>
               <CardContent>
