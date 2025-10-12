@@ -167,7 +167,7 @@ export default function Predict() {
                 <Button 
                   onClick={handleCalculate} 
                   size="lg" 
-                  variant="outline"
+                  variant="calculate"
                   className="w-full mt-6"
                 >
                   Calculate Prediction

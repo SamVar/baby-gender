@@ -135,7 +135,7 @@ export default function Plan() {
                 <Button 
                   onClick={handleCalculate} 
                   size="lg" 
-                  variant="outline"
+                  variant="calculate"
                   className="w-full"
                 >
                   Calculate Best Dates
