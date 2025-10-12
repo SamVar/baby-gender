@@ -43,7 +43,7 @@ export default function Home() {
                   Plan
                 </CardTitle>
                 <CardDescription className="text-base">
-                  Not pregnant yet ? Find the best dates to try for your desired baby gender.
+                  Not pregnant yet? Find the best dates to try for your desired baby gender.
                 </CardDescription>
               </CardHeader>
               <CardContent>
