@@ -1,0 +1,114 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Calendar, Baby, Info } from "lucide-react";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div>
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Baby Gender Planner
+          </h1>
+          <p className="text-sm text-muted-foreground">Plan or predict using blood freshness cycles</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" asChild>
+            <Link to="/about" aria-label="About">
+              <Info className="h-5 w-5" />
+            </Link>
+          </Button>
+          <ThemeToggle />
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-3 animate-fade-in">
+            <h2 className="text-4xl font-bold">Choose Your Method</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Use cyclical blood freshness peaks to plan your ideal conception dates or predict your baby's gender
+            </p>
+            <p className="text-xs text-muted-foreground italic">
+              ✨ For entertainment only
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
+              <CardHeader>
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Calendar className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-2xl">Plan</CardTitle>
+                <CardDescription className="text-base">
+                  Not pregnant yet? Find the best dates to try for your desired baby gender.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    Calendar heatmap of optimal months
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    Top 6 recommended dates
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    Detailed cycle analysis
+                  </li>
+                </ul>
+                <Button asChild className="w-full" size="lg">
+                  <Link to="/plan">Start Planning</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-accent/50">
+              <CardHeader>
+                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Baby className="h-6 w-6 text-accent" />
+                </div>
+                <CardTitle className="text-2xl">Predict</CardTitle>
+                <CardDescription className="text-base">
+                  Already pregnant? Estimate the probability of boy vs girl based on conception date.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                    Use conception or due date
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                    Probability breakdown
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                    Conception window analysis
+                  </li>
+                </ul>
+                <Button asChild className="w-full" size="lg" variant="secondary">
+                  <Link to="/predict">Get Prediction</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button variant="ghost" asChild>
+              <Link to="/about" className="text-muted-foreground hover:text-primary">
+                Learn how it works →
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}

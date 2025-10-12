@@ -39,6 +39,14 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        boy: {
+          DEFAULT: "hsl(var(--boy))",
+          foreground: "hsl(var(--boy-foreground))",
+        },
+        girl: {
+          DEFAULT: "hsl(var(--girl))",
+          foreground: "hsl(var(--girl-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
