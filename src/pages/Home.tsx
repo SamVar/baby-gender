@@ -25,7 +25,7 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-4 py-4">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-4">
           <div className="text-center space-y-3">
             <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
               Choose Your Method
