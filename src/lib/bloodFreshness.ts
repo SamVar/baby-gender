@@ -248,12 +248,22 @@ export function getCycleDetails(
 ): CycleDetails {
   const elapsed = monthsSince(dob, targetDate);
   const position = elapsed % period;
-  const percentToPeak = (position / midpoint) * 100;
+  
+  // Calculate percent to peak: positive when ascending, negative when descending
+  let percentToPeak: number;
+  if (position <= midpoint) {
+    // Ascending phase: 0% to 100%
+    percentToPeak = (position / midpoint) * 100;
+  } else {
+    // Descending phase: -0% to -100%
+    percentToPeak = -((position - midpoint) / midpoint) * 100;
+  }
+  
   const nextPeak = calculateNextPeak(dob, targetDate, period, midpoint);
   
   return {
     position,
-    percentToPeak: Math.min(percentToPeak, 100),
+    percentToPeak,
     nextPeak,
   };
 }
