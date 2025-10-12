@@ -109,7 +109,7 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center pb-24">
             <Button variant="ghost" asChild>
               <Link to="/about" className="text-muted-foreground hover:text-primary-foreground">
                 Learn how it works →
@@ -117,7 +117,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-28 max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <Card className="border-muted-foreground/20 bg-muted/30">
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
