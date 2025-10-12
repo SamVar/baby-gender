@@ -61,7 +61,7 @@ export default function Home() {
                     Detailed cycle analysis
                   </li>
                 </ul>
-                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg" size="lg">
+                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-primary hover:text-primary-foreground" size="lg" variant="secondary">
                   <Link to="/plan">Start Planning</Link>
                 </Button>
               </CardContent>
