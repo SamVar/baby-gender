@@ -122,8 +122,8 @@ export default function Home() {
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  This tool is based on traditional folklore methods and is for entertainment purposes only. 
-                  It is not scientifically validated and should not be used for medical decisions or family planning. 
+                  This tool is based on traditional folklore methods. Even though this tool can produce correct results, 
+                  it is not scientifically validated and should not be used for medical decisions or family planning. 
                   Always consult healthcare professionals for medical advice.
                 </p>
               </CardContent>
