@@ -29,8 +29,9 @@ export default function Predict() {
   const [windowWeight, setWindowWeight] = useState<number>(50); // 0-100, 50 = equal weight
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
+  const [showResults, setShowResults] = useState(false);
 
-  const canCalculate = maleDOB && femaleDOB && (
+  const hasInputs = maleDOB && femaleDOB && (
     (inputMode === 'conception' && conceptionDate) ||
     (inputMode === 'dueDate' && dueDate)
   );
@@ -38,7 +39,7 @@ export default function Predict() {
   let results: ReturnType<typeof calculateMonthResult>[] = [];
   let windowMonths: DateInput[] = [];
   
-  if (canCalculate) {
+  if (hasInputs && showResults) {
     if (inputMode === 'conception' && conceptionDate) {
       results = [calculateMonthResult(maleDOB, femaleDOB, conceptionDate)];
       windowMonths = [conceptionDate];
@@ -48,6 +49,10 @@ export default function Predict() {
       results = windowMonths.map(date => calculateMonthResult(maleDOB, femaleDOB, date));
     }
   }
+
+  const handleCalculate = () => {
+    setShowResults(true);
+  };
 
   const weightedProbability = results.length > 1
     ? calculateWeightedAverage(
@@ -119,7 +124,10 @@ export default function Predict() {
               <CardDescription>Choose your input method</CardDescription>
             </CardHeader>
             <CardContent>
-              <Tabs value={inputMode} onValueChange={(v) => setInputMode(v as any)}>
+              <Tabs value={inputMode} onValueChange={(v) => {
+                setInputMode(v as any);
+                setShowResults(false);
+              }}>
                 <TabsList className="grid w-full grid-cols-2">
                   <TabsTrigger value="conception">Known Conception</TabsTrigger>
                   <TabsTrigger value="dueDate">Due Date</TabsTrigger>
@@ -129,7 +137,10 @@ export default function Predict() {
                   <DOBPicker
                     label="Conception Month & Year"
                     value={conceptionDate}
-                    onChange={setConceptionDate}
+                    onChange={(date) => {
+                      setConceptionDate(date);
+                      setShowResults(false);
+                    }}
                     minYear={2020}
                     maxYear={new Date().getFullYear() + 1}
                   />
@@ -141,15 +152,28 @@ export default function Predict() {
                     <Input
                       type="date"
                       value={dueDate}
-                      onChange={(e) => setDueDate(e.target.value)}
+                      onChange={(e) => {
+                        setDueDate(e.target.value);
+                        setShowResults(false);
+                      }}
                     />
                   </div>
                 </TabsContent>
               </Tabs>
+
+              {hasInputs && (
+                <Button 
+                  onClick={handleCalculate} 
+                  size="lg" 
+                  className="w-full mt-6"
+                >
+                  Calculate Prediction
+                </Button>
+              )}
             </CardContent>
           </Card>
 
-          {!canCalculate && (
+          {!hasInputs && (
             <Alert>
               <Calendar className="h-4 w-4" />
               <AlertDescription>
@@ -158,7 +182,7 @@ export default function Predict() {
             </Alert>
           )}
 
-          {canCalculate && results.length > 0 && (
+          {showResults && results.length > 0 && (
             <>
               {/* Single Result */}
               {results.length === 1 && (

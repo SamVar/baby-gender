@@ -24,6 +24,7 @@ export default function Plan() {
   const [targetSex, setTargetSex] = useState<Sex>('boy');
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
+  const [showResults, setShowResults] = useState(false);
 
   // Default window: next 18 months
   const now = new Date();
@@ -36,16 +37,21 @@ export default function Plan() {
   };
 
   const canCalculate = maleDOB && femaleDOB;
+  const hasInputs = maleDOB && femaleDOB;
   
-  const topMonths = canCalculate
+  const topMonths = canCalculate && showResults
     ? planBestMonths(maleDOB, femaleDOB, targetSex, startDate, endDate, 6)
     : [];
 
-  const allMonths = canCalculate
+  const allMonths = canCalculate && showResults
     ? generateMonthRange(startDate, endDate).map(date =>
         calculateMonthResult(maleDOB, femaleDOB, date, targetSex)
       )
     : [];
+
+  const handleCalculate = () => {
+    setShowResults(true);
+  };
 
   const handleMonthClick = (date: DateInput) => {
     setSelectedMonth(date);
@@ -97,20 +103,26 @@ export default function Plan() {
                 />
               </div>
 
-              {canCalculate && (
+              {hasInputs && (
                 <div className="space-y-3">
                   <label className="text-sm font-medium">Desired Gender</label>
                   <div className="flex gap-3">
                     <Button
                       variant={targetSex === 'boy' ? 'default' : 'outline'}
-                      onClick={() => setTargetSex('boy')}
+                      onClick={() => {
+                        setTargetSex('boy');
+                        setShowResults(false);
+                      }}
                       className="flex-1"
                     >
                       Boy
                     </Button>
                     <Button
                       variant={targetSex === 'girl' ? 'default' : 'outline'}
-                      onClick={() => setTargetSex('girl')}
+                      onClick={() => {
+                        setTargetSex('girl');
+                        setShowResults(false);
+                      }}
                       className="flex-1"
                     >
                       Girl
@@ -118,19 +130,20 @@ export default function Plan() {
                   </div>
                 </div>
               )}
+
+              {hasInputs && (
+                <Button 
+                  onClick={handleCalculate} 
+                  size="lg" 
+                  className="w-full"
+                >
+                  Calculate Best Dates
+                </Button>
+              )}
             </CardContent>
           </Card>
 
-          {!canCalculate && (
-            <Alert>
-              <Calendar className="h-4 w-4" />
-              <AlertDescription>
-                Please enter both partners' birth dates to see recommendations
-              </AlertDescription>
-            </Alert>
-          )}
-
-          {canCalculate && (
+          {showResults && (
             <>
               {/* Top Recommendations */}
               <Card>
