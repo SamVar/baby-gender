@@ -23,8 +23,14 @@ export function DOBPicker({ label, value, onChange, minYear = 1950, maxYear = ne
       <Label className="text-sm font-medium">{label}</Label>
       <div className="grid grid-cols-2 gap-3">
         <Select
-          value={value?.month.toString()}
-          onValueChange={(m) => onChange({ ...value!, month: parseInt(m) })}
+          value={value?.month?.toString() || undefined}
+          onValueChange={(m) => {
+            const newMonth = parseInt(m);
+            onChange({ 
+              month: newMonth, 
+              year: value?.year || new Date().getFullYear() 
+            });
+          }}
         >
           <SelectTrigger className="transition-all hover:border-primary">
             <SelectValue placeholder="Month" />
@@ -39,8 +45,14 @@ export function DOBPicker({ label, value, onChange, minYear = 1950, maxYear = ne
         </Select>
 
         <Select
-          value={value?.year.toString()}
-          onValueChange={(y) => onChange({ ...value!, year: parseInt(y) })}
+          value={value?.year?.toString() || undefined}
+          onValueChange={(y) => {
+            const newYear = parseInt(y);
+            onChange({ 
+              month: value?.month || 1, 
+              year: newYear 
+            });
+          }}
         >
           <SelectTrigger className="transition-all hover:border-primary">
             <SelectValue placeholder="Year" />
