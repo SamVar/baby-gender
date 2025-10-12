@@ -26,11 +26,11 @@ export default function Plan() {
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
   const [showResults, setShowResults] = useState(false);
 
-  // Default window: next 18 months
+  // Default window: next 24 months
   const now = new Date();
   const startDate: DateInput = { year: now.getFullYear(), month: now.getMonth() + 1 };
-  const endYear = now.getFullYear() + 1;
-  const endMonth = now.getMonth() + 7;
+  const endYear = now.getFullYear() + 2;
+  const endMonth = now.getMonth() + 1;
   const endDate: DateInput = {
     year: endYear + Math.floor(endMonth / 12),
     month: (endMonth % 12) || 12

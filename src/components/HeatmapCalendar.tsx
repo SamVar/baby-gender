@@ -46,6 +46,7 @@ export function HeatmapCalendar({ results, targetSex, onMonthClick }: HeatmapCal
                           "hover:scale-105 hover:shadow-md",
                           "flex flex-col items-center justify-center p-2",
                           "text-xs font-medium",
+                          "border-2 border-transparent hover:border-primary",
                           getIntensityClass(probability),
                           probability >= 0.55 ? "text-white" : "text-foreground"
                         )}
