@@ -92,7 +92,7 @@ export default function Home() {
                     Conception window analysis
                   </li>
                 </ul>
-                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg" size="lg" variant="secondary">
+                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-accent hover:text-accent-foreground" size="lg" variant="secondary">
                   <Link to="/predict">Get Prediction</Link>
                 </Button>
               </CardContent>
