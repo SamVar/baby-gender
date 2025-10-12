@@ -31,8 +31,10 @@ export default function Predict() {
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
   const [showResults, setShowResults] = useState(false);
 
-  const hasInputs = maleDOB && femaleDOB && (
-    (inputMode === 'conception' && conceptionDate) ||
+  const hasInputs = maleDOB && femaleDOB && 
+    maleDOB.month && maleDOB.year && 
+    femaleDOB.month && femaleDOB.year && (
+    (inputMode === 'conception' && conceptionDate && conceptionDate.month && conceptionDate.year) ||
     (inputMode === 'dueDate' && dueDate)
   );
 

@@ -26,12 +26,10 @@ export function DOBPicker({ label, value, onChange, minYear = 1950, maxYear = ne
           value={value?.month?.toString() || undefined}
           onValueChange={(m) => {
             const newMonth = parseInt(m);
-            if (value?.year) {
-              onChange({ 
-                month: newMonth, 
-                year: value.year 
-              });
-            }
+            onChange({ 
+              month: newMonth, 
+              year: value?.year || null as any
+            });
           }}
         >
           <SelectTrigger className="transition-all hover:border-primary">
@@ -50,12 +48,10 @@ export function DOBPicker({ label, value, onChange, minYear = 1950, maxYear = ne
           value={value?.year?.toString() || undefined}
           onValueChange={(y) => {
             const newYear = parseInt(y);
-            if (value?.month) {
-              onChange({ 
-                month: value.month, 
-                year: newYear 
-              });
-            }
+            onChange({ 
+              month: value?.month || null as any, 
+              year: newYear 
+            });
           }}
         >
           <SelectTrigger className="transition-all hover:border-primary">

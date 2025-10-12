@@ -36,8 +36,8 @@ export default function Plan() {
     month: (endMonth % 12) || 12
   };
 
-  const canCalculate = maleDOB && femaleDOB;
-  const hasInputs = maleDOB && femaleDOB;
+  const canCalculate = maleDOB && femaleDOB && maleDOB.month && maleDOB.year && femaleDOB.month && femaleDOB.year;
+  const hasInputs = maleDOB && femaleDOB && maleDOB.month && maleDOB.year && femaleDOB.month && femaleDOB.year;
   
   const topMonths = canCalculate && showResults
     ? planBestMonths(maleDOB, femaleDOB, targetSex, startDate, endDate, 6)
