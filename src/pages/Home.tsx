@@ -116,6 +116,19 @@ export default function Home() {
               </Link>
             </Button>
           </div>
+
+          <div className="mt-16 max-w-2xl mx-auto">
+            <Card className="border-muted-foreground/20 bg-muted/30">
+              <CardContent className="pt-6">
+                <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  This tool is based on traditional folklore methods and is for entertainment purposes only. 
+                  It is not scientifically validated and should not be used for medical decisions or family planning. 
+                  Always consult healthcare professionals for medical advice.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
     </div>
