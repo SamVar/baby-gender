@@ -15,6 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        boy: "bg-boy/10 text-boy border border-boy/30 hover:bg-boy/20 hover:border-boy/50",
+        girl: "bg-girl/10 text-girl border border-girl/30 hover:bg-girl/20 hover:border-girl/50",
+        boySelected: "bg-boy text-boy-foreground hover:bg-boy/90",
+        girlSelected: "bg-girl text-girl-foreground hover:bg-girl/90",
       },
       size: {
         default: "h-10 px-4 py-2",

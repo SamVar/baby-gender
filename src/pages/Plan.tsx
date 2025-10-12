@@ -108,7 +108,7 @@ export default function Plan() {
                   <label className="text-sm font-medium">Desired Gender</label>
                   <div className="flex gap-3">
                     <Button
-                      variant={targetSex === 'boy' ? 'default' : 'outline'}
+                      variant={targetSex === 'boy' ? 'boySelected' : 'boy'}
                       onClick={() => {
                         setTargetSex('boy');
                         setShowResults(false);
@@ -118,7 +118,7 @@ export default function Plan() {
                       Boy
                     </Button>
                     <Button
-                      variant={targetSex === 'girl' ? 'default' : 'outline'}
+                      variant={targetSex === 'girl' ? 'girlSelected' : 'girl'}
                       onClick={() => {
                         setTargetSex('girl');
                         setShowResults(false);
