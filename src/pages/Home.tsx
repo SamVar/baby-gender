@@ -19,7 +19,7 @@ export default function Home() {
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Use cyclical blood freshness peaks to plan your ideal conception dates or predict your baby's gender
+            Plan your ideal conception dates or predict your future baby's gender
           </p>
         </div>
       </header>
