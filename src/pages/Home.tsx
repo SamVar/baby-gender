@@ -7,7 +7,7 @@ import { Calendar, Baby, Info } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <header className="container mx-auto px-4 py-8 relative">
+      <header className="container mx-auto px-4 py-8 pt-16 relative">
         <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
           <Link to="/about" aria-label="About">
             <Info className="h-5 w-5" />
