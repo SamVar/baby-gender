@@ -139,10 +139,10 @@ export default function About() {
                   Months are ranked by probability for the target sex:
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• <strong>Best:</strong> ≥70% probability</li>
-                  <li>• <strong>Great:</strong> ≥60% probability</li>
-                  <li>• <strong>Good:</strong> ≥55% probability</li>
-                  <li>• <strong>Close Call:</strong> &lt;55% probability</li>
+                  <li>• <strong>Best:</strong> ≥80% probability</li>
+                  <li>• <strong>Great:</strong> ≥70% probability</li>
+                  <li>• <strong>Good:</strong> ≥60% probability</li>
+                  <li>• <strong>Close Call:</strong> &lt;60% probability</li>
                 </ul>
               </div>
             </CardContent>
