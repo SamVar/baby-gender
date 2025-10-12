@@ -19,7 +19,7 @@ const buttonVariants = cva(
         girl: "bg-girl/10 text-girl border border-girl/30 hover:bg-girl/20 hover:border-girl/50 transition-all",
         boySelected: "bg-boy text-white border-2 border-boy hover:bg-boy/90 shadow-lg shadow-boy/30 transition-all font-semibold",
         girlSelected: "bg-girl text-white border-2 border-girl hover:bg-girl/90 shadow-lg shadow-girl/30 transition-all font-semibold",
-        calculate: "bg-accent text-accent-foreground hover:bg-accent/80 transition-all shadow-md hover:shadow-lg",
+        calculate: "bg-accent text-accent-foreground hover:bg-accent/70 hover:scale-[1.02] transition-all shadow-md hover:shadow-xl",
       },
       size: {
         default: "h-10 px-4 py-2",
