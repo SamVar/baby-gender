@@ -61,7 +61,7 @@ export default function Home() {
                     Detailed cycle analysis
                   </li>
                 </ul>
-                <Button asChild className="w-full" size="lg">
+                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg" size="lg">
                   <Link to="/plan">Start Planning</Link>
                 </Button>
               </CardContent>
@@ -92,7 +92,7 @@ export default function Home() {
                     Conception window analysis
                   </li>
                 </ul>
-                <Button asChild className="w-full" size="lg" variant="secondary">
+                <Button asChild className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg" size="lg" variant="secondary">
                   <Link to="/predict">Get Prediction</Link>
                 </Button>
               </CardContent>
