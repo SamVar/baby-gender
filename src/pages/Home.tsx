@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import { Calendar, Baby, Info } from "lucide-react";
 
 export default function Home() {
@@ -20,7 +20,6 @@ export default function Home() {
               <Info className="h-5 w-5" />
             </Link>
           </Button>
-          <ThemeToggle />
         </div>
       </header>
 
@@ -42,7 +41,7 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">Plan</CardTitle>
+                <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Plan</CardTitle>
                 <CardDescription className="text-base">
                   Not pregnant yet? Find the best dates to try for your desired baby gender.
                 </CardDescription>
@@ -73,7 +72,7 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Baby className="h-6 w-6 text-accent" />
                 </div>
-                <CardTitle className="text-2xl">Predict</CardTitle>
+                <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Predict</CardTitle>
                 <CardDescription className="text-base">
                   Already pregnant? Estimate the probability of boy vs girl based on conception date.
                 </CardDescription>

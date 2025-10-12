@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import { DOBPicker } from "@/components/DOBPicker";
 import { HeatmapCalendar } from "@/components/HeatmapCalendar";
 import { ProbabilityRing } from "@/components/ProbabilityRing";
@@ -78,7 +78,7 @@ export default function Plan() {
             <p className="text-sm text-muted-foreground">Find the best dates for your desired baby gender</p>
           </div>
         </div>
-        <ThemeToggle />
+        
       </header>
 
       <main className="container mx-auto px-4 py-8">
@@ -86,7 +86,7 @@ export default function Plan() {
           {/* Input Card */}
           <Card>
             <CardHeader>
-              <CardTitle>Partner Information</CardTitle>
+              <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Partner Information</CardTitle>
               <CardDescription>Enter birth dates (month & year only)</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -105,7 +105,7 @@ export default function Plan() {
 
               {hasInputs && (
                 <div className="space-y-3">
-                  <label className="text-sm font-medium">Desired Gender</label>
+                  <label className="text-sm font-medium">Desired Gender & Calculate</label>
                   <div className="flex gap-3">
                     <Button
                       variant={targetSex === 'boy' ? 'default' : 'outline'}
@@ -127,18 +127,15 @@ export default function Plan() {
                     >
                       Girl
                     </Button>
+                    <Button 
+                      onClick={handleCalculate} 
+                      size="lg" 
+                      className="flex-1"
+                    >
+                      Calculate Best Dates
+                    </Button>
                   </div>
                 </div>
-              )}
-
-              {hasInputs && (
-                <Button 
-                  onClick={handleCalculate} 
-                  size="lg" 
-                  className="w-full"
-                >
-                  Calculate Best Dates
-                </Button>
               )}
             </CardContent>
           </Card>
@@ -148,7 +145,7 @@ export default function Plan() {
               {/* Top Recommendations */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Top 6 Recommended Months</CardTitle>
+                  <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Top 6 Recommended Months</CardTitle>
                   <CardDescription>
                     Best months for conceiving a {targetSex} based on blood freshness peaks
                   </CardDescription>
@@ -192,7 +189,7 @@ export default function Plan() {
               {/* Heatmap */}
               <Card>
                 <CardHeader>
-                  <CardTitle>Calendar Heatmap</CardTitle>
+                  <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Calendar Heatmap</CardTitle>
                   <CardDescription>
                     Visual representation of probabilities across all months (click any month for details)
                   </CardDescription>

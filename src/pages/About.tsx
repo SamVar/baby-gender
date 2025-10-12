@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import { ArrowLeft, TrendingUp, Calendar, Baby, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -22,7 +22,6 @@ export default function About() {
             <p className="text-sm text-muted-foreground">How the blood freshness model works</p>
           </div>
         </div>
-        <ThemeToggle />
       </header>
 
       <main className="container mx-auto px-4 py-8">

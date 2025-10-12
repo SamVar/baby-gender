@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/ThemeToggle";
+
 import { DOBPicker } from "@/components/DOBPicker";
 import { ProbabilityRing } from "@/components/ProbabilityRing";
 import { LabelBadge } from "@/components/LabelBadge";
@@ -90,7 +90,7 @@ export default function Predict() {
             <p className="text-sm text-muted-foreground">Estimate baby gender based on conception date</p>
           </div>
         </div>
-        <ThemeToggle />
+        
       </header>
 
       <main className="container mx-auto px-4 py-8">
@@ -98,7 +98,7 @@ export default function Predict() {
           {/* Input Card */}
           <Card>
             <CardHeader>
-              <CardTitle>Partner Information</CardTitle>
+              <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Partner Information</CardTitle>
               <CardDescription>Enter birth dates (month & year only)</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -120,7 +120,7 @@ export default function Predict() {
           {/* Conception Input */}
           <Card>
             <CardHeader>
-              <CardTitle>Conception Information</CardTitle>
+              <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Conception Information</CardTitle>
               <CardDescription>Choose your input method</CardDescription>
             </CardHeader>
             <CardContent>
@@ -188,7 +188,7 @@ export default function Predict() {
               {results.length === 1 && (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Prediction Results</CardTitle>
+                    <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Prediction Results</CardTitle>
                     <CardDescription>
                       {MONTH_NAMES[results[0].date.month - 1]} {results[0].date.year}
                     </CardDescription>
@@ -227,7 +227,7 @@ export default function Predict() {
                 <>
                   <Card>
                     <CardHeader>
-                      <CardTitle>Conception Window</CardTitle>
+                      <CardTitle className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Conception Window</CardTitle>
                       <CardDescription>
                         Estimated conception window spans {results.length} months
                       </CardDescription>
