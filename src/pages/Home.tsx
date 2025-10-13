@@ -6,7 +6,7 @@ import { Calendar, Baby, Info } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
       <header className="container mx-auto px-4 py-8 pt-24 relative">
         <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
           <Link to="/about" aria-label="About">
@@ -117,20 +117,22 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="max-w-2xl mx-auto mt-32">
-            <Card className="border-muted-foreground/20 bg-muted/30">
-              <CardContent className="pt-6">
-                <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  This tool is based on traditional folklore methods. Even though this tool can produce correct results, 
-                  it is not scientifically validated and should not be used for medical decisions or family planning. 
-                  Always consult healthcare professionals for medical advice.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </main>
+      <footer className="mt-auto container mx-auto px-4 pb-8">
+        <div className="max-w-2xl mx-auto">
+          <Card className="border-muted-foreground/20 bg-muted/30">
+            <CardContent className="pt-6">
+              <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                This tool is based on traditional folklore methods. Even though this tool can produce correct results, 
+                it is not scientifically validated and should not be used for medical decisions or family planning. 
+                Always consult healthcare professionals for medical advice.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </footer>
     </div>
   );
 }
