@@ -100,7 +100,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-accent text-accent-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg"
+                  className="w-full bg-accent text-accent-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg md:hover:bg-accent"
                   size="lg"
                 >
                   <Link to="/predict">Get Prediction</Link>
