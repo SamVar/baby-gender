@@ -117,7 +117,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto mt-32">
             <Card className="border-muted-foreground/20 bg-muted/30">
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
