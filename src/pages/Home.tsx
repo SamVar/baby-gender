@@ -34,9 +34,9 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-12">
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
+            <Card className="group md:hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 border-2 md:hover:border-primary/50">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform">
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -63,7 +63,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-primary"
+                  className="w-full bg-primary text-primary-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg"
                   size="lg"
                 >
                   <Link to="/plan">Start Planning</Link>
@@ -71,9 +71,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-accent/50">
+            <Card className="group md:hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 border-2 md:hover:border-accent/50">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform">
                   <Baby className="h-6 w-6 text-accent" />
                 </div>
                 <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -100,7 +100,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-accent/80 text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-accent"
+                  className="w-full bg-accent text-accent-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg"
                   size="lg"
                 >
                   <Link to="/predict">Get Prediction</Link>
@@ -111,7 +111,7 @@ export default function Home() {
 
           <div className="mt-12 text-center pb-24">
             <Button variant="ghost" asChild>
-              <Link to="/about" className="text-muted-foreground hover:text-primary-foreground">
+              <Link to="/about" className="text-muted-foreground md:hover:text-primary-foreground">
                 Learn how it works →
               </Link>
             </Button>
