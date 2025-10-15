@@ -16,7 +16,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/60 to-accent bg-clip-text text-transparent drop-shadow-2xl">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -109,21 +109,23 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="flex items-center justify-center gap-12 mt-64 mb-12">
-            <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
-              <div className="p-4 bg-gradient-to-br from-boy/20 to-boy/5 rounded-3xl shadow-xl">
-                <img src={babyBoyImg} alt="Baby Boy" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
+          <section className="pt-56">
+            <div className="flex items-center justify-center gap-12 mb-16">
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="p-4 bg-gradient-to-br from-boy/20 to-boy/5 rounded-3xl shadow-md">
+                  <img src={babyBoyImg} alt="Baby Boy" className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl" />
+                </div>
+                <span className="text-xl font-bold text-boy mt-4">Boy</span>
               </div>
-              <span className="text-xl font-bold text-boy mt-4">Boy</span>
-            </div>
-            <span className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">vs</span>
-            <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
-              <div className="p-4 bg-gradient-to-br from-girl/20 to-girl/5 rounded-3xl shadow-xl">
-                <img src={babyGirlImg} alt="Baby Girl" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
+              <span className="text-3xl font-bold text-accent">vs</span>
+              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+                <div className="p-4 bg-gradient-to-br from-girl/20 to-girl/5 rounded-3xl shadow-md">
+                  <img src={babyGirlImg} alt="Baby Girl" className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl" />
+                </div>
+                <span className="text-xl font-bold text-girl mt-4">Girl</span>
               </div>
-              <span className="text-xl font-bold text-girl mt-4">Girl</span>
             </div>
-          </div>
+          </section>
 
           <div className="text-center pb-24">
             <Button variant="ghost" asChild>
