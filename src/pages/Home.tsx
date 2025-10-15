@@ -126,12 +126,12 @@ export default function Home() {
                   <img 
                     src={babyBoyImg} 
                     alt="Baby Boy" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none transition-opacity duration-300 ${isBoyHovered ? 'opacity-0' : 'opacity-100'}`}
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isBoyHovered ? 'opacity-0' : 'opacity-100'}`}
                   />
                   <img 
                     src={babyBoyHoverImg} 
                     alt="Baby Boy Animated" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none absolute top-3 left-3 transition-opacity duration-300 ${isBoyHovered ? 'opacity-100' : 'opacity-0'}`}
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isBoyHovered ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
                 <span className="text-xl font-bold text-boy mt-4">Boy</span>
@@ -146,12 +146,12 @@ export default function Home() {
                   <img 
                     src={babyGirlImg} 
                     alt="Baby Girl" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none transition-opacity duration-300 ${isGirlHovered ? 'opacity-0' : 'opacity-100'}`}
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isGirlHovered ? 'opacity-0' : 'opacity-100'}`}
                   />
                   <img 
                     src={babyGirlHoverImg} 
                     alt="Baby Girl Animated" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none absolute top-3 left-3 transition-opacity duration-300 ${isGirlHovered ? 'opacity-100' : 'opacity-0'}`}
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isGirlHovered ? 'opacity-100' : 'opacity-0'}`}
                   />
                 </div>
                 <span className="text-xl font-bold text-girl mt-4">Girl</span>
