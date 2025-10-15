@@ -174,13 +174,13 @@ export default function Plan() {
                           className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${
                             isHighlyLikely 
                               ? targetSex === 'boy' 
-                                ? 'border-boy bg-boy/10 hover:border-boy/80 hover:bg-boy/15' 
-                                : 'border-girl bg-girl/10 hover:border-girl/80 hover:bg-girl/15'
+                                ? 'border-boy hover:border-boy/80' 
+                                : 'border-girl hover:border-girl/80'
                               : isLikely
                                 ? targetSex === 'boy'
-                                  ? 'border-boy/60 bg-boy/5 hover:border-boy hover:bg-boy/10'
-                                  : 'border-girl/60 bg-girl/5 hover:border-girl hover:bg-girl/10'
-                                : 'border-border bg-card hover:border-primary'
+                                  ? 'border-boy/60 hover:border-boy'
+                                  : 'border-girl/60 hover:border-girl'
+                                : 'border-border hover:border-primary'
                           }`}
                         >
                           <div className="flex items-start justify-between mb-3">
