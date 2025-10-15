@@ -82,9 +82,7 @@ export default function Home() {
                 <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-accent/30 to-accent/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-lg">
                   <Baby className="h-7 w-7 text-accent" />
                 </div>
-                <CardTitle className="text-2xl text-accent">
-                  Predict
-                </CardTitle>
+                <CardTitle className="text-2xl text-accent">Predict</CardTitle>
                 <CardDescription className="text-base">
                   Already pregnant? Estimate the probability of boy vs girl based on conception date.
                 </CardDescription>
@@ -117,41 +115,41 @@ export default function Home() {
 
           <section className="pt-32">
             <div className="flex items-center justify-center gap-12 mb-16">
-              <div 
+              <div
                 className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
                 onMouseEnter={() => setIsBoyHovered(true)}
                 onMouseLeave={() => setIsBoyHovered(false)}
               >
-                <div className="p-3 bg-gradient-to-br from-boy/15 to-boy/5 rounded-3xl relative overflow-hidden shadow-none">
-                  <img 
-                    src={babyBoyImg} 
-                    alt="Baby Boy" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isBoyHovered ? 'opacity-0' : 'opacity-100'}`}
+                <div className="relative">
+                  <img
+                    src={babyBoyImg}
+                    alt="Baby Boy"
+                    className={`block w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isBoyHovered ? "opacity-0" : "opacity-100"}`}
                   />
-                  <img 
-                    src={babyBoyHoverImg} 
-                    alt="Baby Boy Animated" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isBoyHovered ? 'opacity-100' : 'opacity-0'}`}
+                  <img
+                    src={babyBoyHoverImg}
+                    alt="Baby Boy Animated"
+                    className={`block w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isBoyHovered ? "opacity-100" : "opacity-0"}`}
                   />
                 </div>
                 <span className="text-xl font-bold text-boy mt-4">Boy</span>
               </div>
               <span className="text-3xl font-bold text-accent">vs</span>
-              <div 
+              <div
                 className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
                 onMouseEnter={() => setIsGirlHovered(true)}
                 onMouseLeave={() => setIsGirlHovered(false)}
               >
-                <div className="p-3 bg-gradient-to-br from-girl/15 to-girl/5 rounded-3xl relative overflow-hidden shadow-none">
-                  <img 
-                    src={babyGirlImg} 
-                    alt="Baby Girl" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isGirlHovered ? 'opacity-0' : 'opacity-100'}`}
+                <div className="relative">
+                  <img
+                    src={babyGirlImg}
+                    alt="Baby Girl"
+                    className={`block w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none transition-opacity duration-300 ${isGirlHovered ? "opacity-0" : "opacity-100"}`}
                   />
-                  <img 
-                    src={babyGirlHoverImg} 
-                    alt="Baby Girl Animated" 
-                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isGirlHovered ? 'opacity-100' : 'opacity-0'}`}
+                  <img
+                    src={babyGirlHoverImg}
+                    alt="Baby Girl Animated"
+                    className={`block w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-none drop-shadow-none filter-none absolute inset-0 transition-opacity duration-300 ${isGirlHovered ? "opacity-100" : "opacity-0"}`}
                   />
                 </div>
                 <span className="text-xl font-bold text-girl mt-4">Girl</span>
@@ -166,7 +164,6 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-
         </div>
       </main>
       <footer className="mt-auto container mx-auto px-4 pb-8">
@@ -175,8 +172,8 @@ export default function Home() {
             <CardContent className="pt-6">
               <h3 className="font-semibold text-sm mb-2">Important Disclaimer</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                This tool is based on traditional folklore methods. Even though this tool can produce correct results, 
-                it is not scientifically validated and should not be used for medical decisions or family planning. 
+                This tool is based on traditional folklore methods. Even though this tool can produce correct results,
+                it is not scientifically validated and should not be used for medical decisions or family planning.
                 Always consult healthcare professionals for medical advice.
               </p>
             </CardContent>
