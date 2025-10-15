@@ -15,7 +15,7 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December"
 ];
 
-export function DOBPicker({ label, value, onChange, minYear = 1950, maxYear = new Date().getFullYear() }: DOBPickerProps) {
+export function DOBPicker({ label, value, onChange, minYear = 1925, maxYear = new Date().getFullYear() }: DOBPickerProps) {
   const years = Array.from({ length: maxYear - minYear + 1 }, (_, i) => maxYear - i);
 
   return (
