@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import babyBoyImg from "@/assets/baby-boy.png";
-import babyGirlImg from "@/assets/baby-girl.png";
+import babyBoyImg from "@/assets/baby-boy-full.png";
+import babyGirlImg from "@/assets/baby-girl-full.png";
 import { Calendar, Baby, Info } from "lucide-react";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary/90 via-primary to-accent bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -68,10 +68,6 @@ export default function Home() {
                 >
                   <Link to="/plan">Start Planning</Link>
                 </Button>
-                <div className="mt-6 flex items-center justify-center gap-2">
-                  <img src={babyBoyImg} alt="Baby Boy" className="w-12 h-12 rounded-full" />
-                  <span className="text-sm font-semibold text-boy">Boy</span>
-                </div>
               </CardContent>
             </Card>
 
@@ -109,15 +105,23 @@ export default function Home() {
                 >
                   <Link to="/predict">Get Prediction</Link>
                 </Button>
-                <div className="mt-6 flex items-center justify-center gap-2">
-                  <img src={babyGirlImg} alt="Baby Girl" className="w-12 h-12 rounded-full" />
-                  <span className="text-sm font-semibold text-girl">Girl</span>
-                </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="mt-12 text-center pb-24">
+          <div className="flex items-center justify-center gap-8 mt-8 mb-12">
+            <div className="flex flex-col items-center">
+              <img src={babyBoyImg} alt="Baby Boy" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+              <span className="text-lg font-bold text-boy mt-2">Boy</span>
+            </div>
+            <span className="text-2xl font-bold text-muted-foreground">vs</span>
+            <div className="flex flex-col items-center">
+              <img src={babyGirlImg} alt="Baby Girl" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+              <span className="text-lg font-bold text-girl mt-2">Girl</span>
+            </div>
+          </div>
+
+          <div className="text-center pb-24">
             <Button variant="ghost" asChild>
               <Link to="/about" className="text-muted-foreground md:hover:text-primary-foreground">
                 Learn how it works →
