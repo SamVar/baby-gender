@@ -3,9 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import babyBoyImg from "@/assets/baby-boy-full.png";
 import babyGirlImg from "@/assets/baby-girl-full.png";
+import babyBoyHoverImg from "@/assets/baby-boy-hover.png";
+import babyGirlHoverImg from "@/assets/baby-girl-hover.png";
 import { Calendar, Baby, Info } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [isBoyHovered, setIsBoyHovered] = useState(false);
+  const [isGirlHovered, setIsGirlHovered] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-primary/5">
       <header className="container mx-auto px-4 py-8 pt-24 relative">
@@ -111,16 +117,42 @@ export default function Home() {
 
           <section className="pt-32">
             <div className="flex items-center justify-center gap-12 mb-16">
-              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
-                <div className="p-3 bg-gradient-to-br from-boy/15 to-boy/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                  <img src={babyBoyImg} alt="Baby Boy" className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl" />
+              <div 
+                className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
+                onMouseEnter={() => setIsBoyHovered(true)}
+                onMouseLeave={() => setIsBoyHovered(false)}
+              >
+                <div className="p-3 bg-gradient-to-br from-boy/15 to-boy/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                  <img 
+                    src={babyBoyImg} 
+                    alt="Baby Boy" 
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl transition-opacity duration-300 ${isBoyHovered ? 'opacity-0' : 'opacity-100'}`}
+                  />
+                  <img 
+                    src={babyBoyHoverImg} 
+                    alt="Baby Boy Animated" 
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl absolute top-3 left-3 transition-opacity duration-300 ${isBoyHovered ? 'opacity-100' : 'opacity-0'}`}
+                  />
                 </div>
                 <span className="text-xl font-bold text-boy mt-4">Boy</span>
               </div>
               <span className="text-3xl font-bold text-accent">vs</span>
-              <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
-                <div className="p-3 bg-gradient-to-br from-girl/15 to-girl/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-                  <img src={babyGirlImg} alt="Baby Girl" className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl" />
+              <div 
+                className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
+                onMouseEnter={() => setIsGirlHovered(true)}
+                onMouseLeave={() => setIsGirlHovered(false)}
+              >
+                <div className="p-3 bg-gradient-to-br from-girl/15 to-girl/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                  <img 
+                    src={babyGirlImg} 
+                    alt="Baby Girl" 
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl transition-opacity duration-300 ${isGirlHovered ? 'opacity-0' : 'opacity-100'}`}
+                  />
+                  <img 
+                    src={babyGirlHoverImg} 
+                    alt="Baby Girl Animated" 
+                    className={`w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl absolute top-3 left-3 transition-opacity duration-300 ${isGirlHovered ? 'opacity-100' : 'opacity-0'}`}
+                  />
                 </div>
                 <span className="text-xl font-bold text-girl mt-4">Girl</span>
               </div>
