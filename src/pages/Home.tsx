@@ -16,7 +16,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary from-10% via-primary/70 via-40% to-accent bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -109,14 +109,14 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="flex items-center justify-center gap-8 mt-16 mb-12">
+          <div className="flex items-center justify-center gap-8 mt-32 mb-12">
             <div className="flex flex-col items-center">
-              <img src={babyBoyImg} alt="Baby Boy" className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-2xl" />
+              <img src={babyBoyImg} alt="Baby Boy" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
               <span className="text-lg font-bold text-boy mt-2">Boy</span>
             </div>
             <span className="text-2xl font-bold text-accent">vs</span>
             <div className="flex flex-col items-center">
-              <img src={babyGirlImg} alt="Baby Girl" className="w-24 h-24 md:w-32 md:h-32 object-contain rounded-2xl" />
+              <img src={babyGirlImg} alt="Baby Girl" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
               <span className="text-lg font-bold text-girl mt-2">Girl</span>
             </div>
           </div>
