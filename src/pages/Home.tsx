@@ -115,7 +115,8 @@ export default function Home() {
 
           <section className="pt-32">
             <div className="flex items-center justify-center gap-12 mb-16">
-              <div
+              <Link
+                to="/plan?gender=boy"
                 className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
                 onMouseEnter={() => setIsBoyHovered(true)}
                 onMouseLeave={() => setIsBoyHovered(false)}
@@ -133,9 +134,10 @@ export default function Home() {
                   />
                 </div>
                 <span className="text-xl font-bold text-boy mt-4">Boy</span>
-              </div>
+              </Link>
               <span className="text-3xl font-bold text-accent">vs</span>
-              <div
+              <Link
+                to="/plan?gender=girl"
                 className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
                 onMouseEnter={() => setIsGirlHovered(true)}
                 onMouseLeave={() => setIsGirlHovered(false)}
@@ -153,7 +155,7 @@ export default function Home() {
                   />
                 </div>
                 <span className="text-xl font-bold text-girl mt-4">Girl</span>
-              </div>
+              </Link>
             </div>
           </section>
 

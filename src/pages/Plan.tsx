@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -19,12 +19,21 @@ const MONTH_NAMES = [
 ];
 
 export default function Plan() {
+  const [searchParams] = useSearchParams();
   const [maleDOB, setMaleDOB] = useState<DateInput | null>(null);
   const [femaleDOB, setFemaleDOB] = useState<DateInput | null>(null);
   const [targetSex, setTargetSex] = useState<Sex>('boy');
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
   const [showResults, setShowResults] = useState(false);
+
+  // Apply gender from URL parameter on mount
+  useEffect(() => {
+    const genderParam = searchParams.get('gender');
+    if (genderParam === 'boy' || genderParam === 'girl') {
+      setTargetSex(genderParam);
+    }
+  }, [searchParams]);
 
   // Default window: next 36 months
   const now = new Date();
