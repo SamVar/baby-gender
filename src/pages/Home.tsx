@@ -33,7 +33,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
             <Card className="group shadow-xl border-2 border-primary/40 bg-gradient-to-br from-card via-card to-primary/5 md:hover:shadow-2xl md:hover:border-primary/70 md:hover:-translate-y-3 transition-all duration-500 md:hover:scale-[1.03] rounded-2xl">
               <CardHeader>
                 <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-lg">
