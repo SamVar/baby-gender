@@ -122,7 +122,7 @@ export default function Home() {
                 onMouseEnter={() => setIsBoyHovered(true)}
                 onMouseLeave={() => setIsBoyHovered(false)}
               >
-                <div className="p-3 bg-gradient-to-br from-boy/15 to-boy/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                <div className="p-3 bg-gradient-to-br from-boy/15 to-boy/5 rounded-3xl relative overflow-hidden">
                   <img 
                     src={babyBoyImg} 
                     alt="Baby Boy" 
@@ -142,7 +142,7 @@ export default function Home() {
                 onMouseEnter={() => setIsGirlHovered(true)}
                 onMouseLeave={() => setIsGirlHovered(false)}
               >
-                <div className="p-3 bg-gradient-to-br from-girl/15 to-girl/5 rounded-3xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                <div className="p-3 bg-gradient-to-br from-girl/15 to-girl/5 rounded-3xl relative overflow-hidden">
                   <img 
                     src={babyGirlImg} 
                     alt="Baby Girl" 
