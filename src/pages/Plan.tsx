@@ -163,25 +163,18 @@ export default function Plan() {
                 <CardContent>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {topMonths.map((result, idx) => {
-                      const targetProb = result.probabilities[targetSex];
-                      const isHighlyLikely = targetProb >= 0.9;
-                      const isLikely = targetProb >= 0.75;
+                      const getBorderColor = () => {
+                        if (result.badge === 'Best') return 'border-green-500 hover:border-green-500/80';
+                        if (result.badge === 'Great') return 'border-accent hover:border-accent/80';
+                        if (result.badge === 'Good') return 'border-primary hover:border-primary/80';
+                        return 'border-border hover:border-primary';
+                      };
                       
                       return (
                         <button
                           key={`${result.date.year}-${result.date.month}`}
                           onClick={() => handleMonthClick(result.date)}
-                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${
-                            isHighlyLikely 
-                              ? targetSex === 'boy' 
-                                ? 'border-boy hover:border-boy/80' 
-                                : 'border-girl hover:border-girl/80'
-                              : isLikely
-                                ? targetSex === 'boy'
-                                  ? 'border-boy/60 hover:border-boy'
-                                  : 'border-girl/60 hover:border-girl'
-                                : 'border-border hover:border-primary'
-                          }`}
+                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${getBorderColor()}`}
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div>
