@@ -162,36 +162,56 @@ export default function Plan() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {topMonths.map((result, idx) => (
-                      <button
-                        key={`${result.date.year}-${result.date.month}`}
-                        onClick={() => handleMonthClick(result.date)}
-                        className="text-left p-4 rounded-lg border-2 hover:border-primary transition-all hover:shadow-md"
-                      >
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <p className="font-semibold text-lg">
-                              {MONTH_NAMES[result.date.month - 1]}
-                            </p>
-                            <p className="text-sm text-muted-foreground">{result.date.year}</p>
+                    {topMonths.map((result, idx) => {
+                      const targetProb = result.probabilities[targetSex];
+                      const isHighlyLikely = targetProb >= 0.9;
+                      const isLikely = targetProb >= 0.75;
+                      
+                      return (
+                        <button
+                          key={`${result.date.year}-${result.date.month}`}
+                          onClick={() => handleMonthClick(result.date)}
+                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${
+                            isHighlyLikely 
+                              ? targetSex === 'boy' 
+                                ? 'border-boy bg-boy/10 hover:border-boy/80 hover:bg-boy/15' 
+                                : 'border-girl bg-girl/10 hover:border-girl/80 hover:bg-girl/15'
+                              : isLikely
+                                ? targetSex === 'boy'
+                                  ? 'border-boy/60 bg-boy/5 hover:border-boy hover:bg-boy/10'
+                                  : 'border-girl/60 bg-girl/5 hover:border-girl hover:bg-girl/10'
+                                : 'border-border bg-card hover:border-primary'
+                          }`}
+                        >
+                          <div className="flex items-start justify-between mb-3">
+                            <div>
+                              <p className="font-semibold text-lg">
+                                {MONTH_NAMES[result.date.month - 1]}
+                              </p>
+                              <p className="text-sm text-muted-foreground">{result.date.year}</p>
+                            </div>
+                            <ResultBadge badge={result.badge} />
                           </div>
-                          <ResultBadge badge={result.badge} />
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Boy:</span>
-                            <span className="font-medium">{(result.probabilities.boy * 100).toFixed(1)}%</span>
+                          <div className="space-y-2">
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">Boy:</span>
+                              <span className={`font-medium ${result.probabilities.boy >= 0.9 ? 'text-boy font-bold' : ''}`}>
+                                {(result.probabilities.boy * 100).toFixed(1)}%
+                              </span>
+                            </div>
+                            <div className="flex justify-between text-sm">
+                              <span className="text-muted-foreground">Girl:</span>
+                              <span className={`font-medium ${result.probabilities.girl >= 0.9 ? 'text-girl font-bold' : ''}`}>
+                                {(result.probabilities.girl * 100).toFixed(1)}%
+                              </span>
+                            </div>
                           </div>
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Girl:</span>
-                            <span className="font-medium">{(result.probabilities.girl * 100).toFixed(1)}%</span>
+                          <div className="mt-3">
+                            <LabelBadge label={result.label} />
                           </div>
-                        </div>
-                        <div className="mt-3">
-                          <LabelBadge label={result.label} />
-                        </div>
-                      </button>
-                    ))}
+                        </button>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
