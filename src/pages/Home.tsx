@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import babyBoyImg from "@/assets/baby-boy.png";
+import babyGirlImg from "@/assets/baby-girl.png";
 import { Calendar, Baby, Info } from "lucide-react";
 
 export default function Home() {
@@ -15,19 +16,19 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Plan your ideal conception dates or predict your future baby's gender
+            Plan your conception dates or predict your future baby's gender
           </p>
         </div>
       </header>
 
       <main className="container mx-auto px-4 pt-0 pb-8">
         <div className="max-w-4xl mx-auto space-y-4">
-          <div className="text-center space-y-3">
-            <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
+          <div className="text-center space-y-3 mb-12">
+            <span className="text-sm font-bold tracking-wider uppercase bg-gradient-to-r from-primary via-accent to-accent bg-clip-text text-transparent">
               Choose Your Method
             </span>
           </div>
@@ -67,6 +68,10 @@ export default function Home() {
                 >
                   <Link to="/plan">Start Planning</Link>
                 </Button>
+                <div className="mt-6 flex items-center justify-center gap-2">
+                  <img src={babyBoyImg} alt="Baby Boy" className="w-12 h-12 rounded-full" />
+                  <span className="text-sm font-semibold text-boy">Boy</span>
+                </div>
               </CardContent>
             </Card>
 
@@ -104,6 +109,10 @@ export default function Home() {
                 >
                   <Link to="/predict">Get Prediction</Link>
                 </Button>
+                <div className="mt-6 flex items-center justify-center gap-2">
+                  <img src={babyGirlImg} alt="Baby Girl" className="w-12 h-12 rounded-full" />
+                  <span className="text-sm font-semibold text-girl">Girl</span>
+                </div>
               </CardContent>
             </Card>
           </div>
