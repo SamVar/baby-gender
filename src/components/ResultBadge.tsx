@@ -10,7 +10,7 @@ export function ResultBadge({ badge, className }: ResultBadgeProps) {
   if (!badge) return null;
 
   const styles = {
-    Best: "bg-primary/10 text-primary border-primary/20",
+    Best: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20",
     Great: "bg-accent/10 text-accent border-accent/20",
     Good: "bg-boy/10 text-boy border-boy/20",
     "Close Call": "bg-muted text-muted-foreground border-border",
