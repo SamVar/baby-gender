@@ -16,7 +16,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary from-5% via-primary/50 via-35% to-accent to-95% bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary from-5% via-primary/40 via-40% to-accent to-75% bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
