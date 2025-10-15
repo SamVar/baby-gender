@@ -164,9 +164,9 @@ export default function Plan() {
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {topMonths.map((result, idx) => {
                       const getCardStyles = () => {
-                        if (result.badge === 'Best') return 'border-green-500 hover:border-green-500/80 bg-green-500/[0.02]';
-                        if (result.badge === 'Great') return 'border-accent hover:border-accent/80 bg-accent/[0.02]';
-                        if (result.badge === 'Good') return 'border-primary hover:border-primary/80 bg-primary/[0.02]';
+                        if (result.badge === 'Best') return 'border-green-500 hover:border-green-500/80 bg-green-500/[0.01]';
+                        if (result.badge === 'Great') return 'border-accent hover:border-accent/80 bg-accent/[0.01]';
+                        if (result.badge === 'Good') return 'border-primary hover:border-primary/80 bg-primary/[0.01]';
                         return 'border-border hover:border-primary';
                       };
                       
