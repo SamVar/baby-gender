@@ -7,7 +7,7 @@ import { Calendar, Baby, Info } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-primary/5">
       <header className="container mx-auto px-4 py-8 pt-24 relative">
         <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
           <Link to="/about" aria-label="About">
@@ -16,7 +16,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary from-15% via-accent via-50% to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/60 to-accent bg-clip-text text-transparent drop-shadow-2xl">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -34,10 +34,10 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-12">
-            <Card className="group shadow-lg border-2 border-primary/40 bg-gradient-to-br from-card via-card to-primary/5 md:hover:shadow-2xl md:hover:border-primary/60 md:hover:-translate-y-2 transition-all duration-500 md:hover:scale-[1.02]">
+            <Card className="group shadow-xl border-2 border-primary/40 bg-gradient-to-br from-card via-card to-primary/5 md:hover:shadow-2xl md:hover:border-primary/70 md:hover:-translate-y-3 transition-all duration-500 md:hover:scale-[1.03] rounded-2xl">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-md">
-                  <Calendar className="h-6 w-6 text-primary" />
+                <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-lg">
+                  <Calendar className="h-7 w-7 text-primary" />
                 </div>
                 <CardTitle className="text-2xl bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent">
                   Plan
@@ -46,7 +46,7 @@ export default function Home() {
                   Not pregnant yet? Find the best dates to try for your desired baby gender.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pb-8">
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
@@ -63,7 +63,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-xl md:hover:from-primary/90 md:hover:to-primary shadow-md"
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl md:hover:from-primary/90 md:hover:to-primary shadow-lg rounded-xl"
                   size="lg"
                 >
                   <Link to="/plan">Start Planning</Link>
@@ -71,10 +71,10 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="group shadow-lg border-2 border-accent/40 bg-gradient-to-br from-card via-card to-accent/5 md:hover:shadow-2xl md:hover:border-accent/60 md:hover:-translate-y-2 transition-all duration-500 md:hover:scale-[1.02]">
+            <Card className="group shadow-xl border-2 border-accent/40 bg-gradient-to-br from-card via-card to-accent/5 md:hover:shadow-2xl md:hover:border-accent/70 md:hover:-translate-y-3 transition-all duration-500 md:hover:scale-[1.03] rounded-2xl">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-md">
-                  <Baby className="h-6 w-6 text-accent" />
+                <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-accent/30 to-accent/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-lg">
+                  <Baby className="h-7 w-7 text-accent" />
                 </div>
                 <CardTitle className="text-2xl text-accent">
                   Predict
@@ -83,7 +83,7 @@ export default function Home() {
                   Already pregnant? Estimate the probability of boy vs girl based on conception date.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pb-8">
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                   <li className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
@@ -100,7 +100,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-xl md:hover:from-accent/90 md:hover:to-accent shadow-md"
+                  className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl md:hover:from-accent/90 md:hover:to-accent shadow-lg rounded-xl"
                   size="lg"
                 >
                   <Link to="/predict">Get Prediction</Link>
@@ -109,15 +109,19 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="flex items-center justify-center gap-8 mt-48 mb-12">
-            <div className="flex flex-col items-center">
-              <img src={babyBoyImg} alt="Baby Boy" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
-              <span className="text-lg font-bold text-boy mt-2">Boy</span>
+          <div className="flex items-center justify-center gap-12 mt-64 mb-12">
+            <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+              <div className="p-4 bg-gradient-to-br from-boy/20 to-boy/5 rounded-3xl shadow-xl">
+                <img src={babyBoyImg} alt="Baby Boy" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
+              </div>
+              <span className="text-xl font-bold text-boy mt-4">Boy</span>
             </div>
-            <span className="text-2xl font-bold text-accent">vs</span>
-            <div className="flex flex-col items-center">
-              <img src={babyGirlImg} alt="Baby Girl" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
-              <span className="text-lg font-bold text-girl mt-2">Girl</span>
+            <span className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">vs</span>
+            <div className="flex flex-col items-center transform transition-all duration-300 hover:scale-105">
+              <div className="p-4 bg-gradient-to-br from-girl/20 to-girl/5 rounded-3xl shadow-xl">
+                <img src={babyGirlImg} alt="Baby Girl" className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl" />
+              </div>
+              <span className="text-xl font-bold text-girl mt-4">Girl</span>
             </div>
           </div>
 
