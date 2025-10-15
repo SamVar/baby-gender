@@ -29,10 +29,10 @@ All colors MUST be HSL.
     --accent: 15 95% 68%;
     --accent-foreground: 0 0% 100%;
 
-    --boy: 215 90% 65%;
+    --boy: 215 95% 62%;
     --boy-foreground: 0 0% 100%;
     
-    --girl: 340 88% 68%;
+    --girl: 340 95% 65%;
     --girl-foreground: 0 0% 100%;
 
     --destructive: 0 87% 58%;
@@ -76,10 +76,10 @@ All colors MUST be HSL.
     --accent: 15 95% 68%;
     --accent-foreground: 0 0% 100%;
 
-    --boy: 215 90% 67%;
+    --boy: 215 95% 65%;
     --boy-foreground: 0 0% 100%;
     
-    --girl: 340 88% 72%;
+    --girl: 340 95% 68%;
     --girl-foreground: 0 0% 100%;
 
     --destructive: 0 80% 58%;
