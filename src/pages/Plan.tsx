@@ -174,7 +174,7 @@ export default function Plan() {
                         <button
                           key={`${result.date.year}-${result.date.month}`}
                           onClick={() => handleMonthClick(result.date)}
-                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${getCardStyles()}`}
+                          className={`text-left p-4 rounded-lg border-2 transition-all duration-300 hover:shadow-lg hover:scale-105 ${getCardStyles()}`}
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div>
