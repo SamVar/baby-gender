@@ -112,33 +112,31 @@ export default function Plan() {
                 />
               </div>
 
-              {hasInputs && (
-                <div className="space-y-3">
-                  <label className="text-sm font-medium">Desired Gender</label>
-                  <div className="flex gap-3">
-                    <Button
-                      variant={targetSex === 'boy' ? 'boySelected' : 'boy'}
-                      onClick={() => {
-                        setTargetSex('boy');
-                        setShowResults(false);
-                      }}
-                      className="flex-1"
-                    >
-                      Boy
-                    </Button>
-                    <Button
-                      variant={targetSex === 'girl' ? 'girlSelected' : 'girl'}
-                      onClick={() => {
-                        setTargetSex('girl');
-                        setShowResults(false);
-                      }}
-                      className="flex-1"
-                    >
-                      Girl
-                    </Button>
-                  </div>
+              <div className="space-y-3">
+                <label className="text-sm font-medium">Desired Gender</label>
+                <div className="flex gap-3">
+                  <Button
+                    variant={targetSex === 'boy' ? 'boySelected' : 'boy'}
+                    onClick={() => {
+                      setTargetSex('boy');
+                      setShowResults(false);
+                    }}
+                    className="flex-1"
+                  >
+                    Boy
+                  </Button>
+                  <Button
+                    variant={targetSex === 'girl' ? 'girlSelected' : 'girl'}
+                    onClick={() => {
+                      setTargetSex('girl');
+                      setShowResults(false);
+                    }}
+                    className="flex-1"
+                  >
+                    Girl
+                  </Button>
                 </div>
-              )}
+              </div>
 
               {hasInputs && (
                 <Button 
