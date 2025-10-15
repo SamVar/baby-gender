@@ -15,7 +15,7 @@ export default function Home() {
         </Button>
 
         <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -30,16 +30,15 @@ export default function Home() {
             <span className="text-xs font-semibold tracking-wider uppercase text-primary/70 bg-primary/10 px-3 py-1 rounded-full inline-block">
               Choose Your Method
             </span>
-            <p className="text-xs text-muted-foreground italic">✨ For entertainment only</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-12">
-            <Card className="group md:hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 border-2 md:hover:border-primary/50">
+            <Card className="group shadow-lg border-2 border-primary/40 bg-gradient-to-br from-card via-card to-primary/5 md:hover:shadow-2xl md:hover:border-primary/60 md:hover:-translate-y-2 transition-all duration-500 md:hover:scale-[1.02]">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-md">
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <CardTitle className="text-2xl bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent">
                   Plan
                 </CardTitle>
                 <CardDescription className="text-base">
@@ -63,7 +62,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-primary text-primary-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-xl md:hover:from-primary/90 md:hover:to-primary shadow-md"
                   size="lg"
                 >
                   <Link to="/plan">Start Planning</Link>
@@ -71,12 +70,12 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="group md:hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 border-2 md:hover:border-accent/50">
+            <Card className="group shadow-lg border-2 border-accent/40 bg-gradient-to-br from-card via-card to-accent/5 md:hover:shadow-2xl md:hover:border-accent/60 md:hover:-translate-y-2 transition-all duration-500 md:hover:scale-[1.02]">
               <CardHeader>
-                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center mb-4 md:group-hover:scale-110 transition-transform shadow-md">
                   <Baby className="h-6 w-6 text-accent" />
                 </div>
-                <CardTitle className="text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <CardTitle className="text-2xl text-accent">
                   Predict
                 </CardTitle>
                 <CardDescription className="text-base">
@@ -100,7 +99,7 @@ export default function Home() {
                 </ul>
                 <Button
                   asChild
-                  className="w-full bg-accent text-accent-foreground transition-all duration-300 md:hover:scale-105 md:hover:shadow-lg md:hover:bg-accent"
+                  className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-xl md:hover:from-accent/90 md:hover:to-accent shadow-md"
                   size="lg"
                 >
                   <Link to="/predict">Get Prediction</Link>
