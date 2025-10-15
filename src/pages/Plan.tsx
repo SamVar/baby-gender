@@ -142,7 +142,7 @@ export default function Plan() {
                 <Button 
                   onClick={handleCalculate} 
                   size="lg" 
-                  className="w-full"
+                  className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl md:hover:from-accent/90 md:hover:to-accent shadow-lg rounded-xl"
                 >
                   Calculate Best Dates
                 </Button>
