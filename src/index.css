@@ -8,39 +8,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 280 25% 98%;
-    --foreground: 280 15% 5%;
+    --background: 280 22% 98%;
+    --foreground: 280 12% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 280 15% 5%;
+    --card-foreground: 280 12% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 280 15% 5%;
+    --popover-foreground: 280 12% 8%;
 
-    --primary: 265 95% 65%;
+    --primary: 265 85% 68%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 30% 90%;
-    --secondary-foreground: 280 15% 5%;
+    --secondary: 280 22% 92%;
+    --secondary-foreground: 280 12% 8%;
 
-    --muted: 280 25% 92%;
-    --muted-foreground: 280 15% 40%;
+    --muted: 280 20% 94%;
+    --muted-foreground: 280 12% 42%;
 
-    --accent: 15 100% 65%;
+    --accent: 15 95% 68%;
     --accent-foreground: 0 0% 100%;
 
-    --boy: 215 90% 60%;
+    --boy: 215 80% 65%;
     --boy-foreground: 0 0% 100%;
     
-    --girl: 340 85% 65%;
+    --girl: 340 75% 68%;
     --girl-foreground: 0 0% 100%;
 
-    --destructive: 0 90% 55%;
+    --destructive: 0 87% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 280 25% 85%;
-    --input: 280 25% 85%;
-    --ring: 265 85% 60%;
+    --border: 280 20% 88%;
+    --input: 280 20% 88%;
+    --ring: 265 75% 63%;
 
     --radius: 0.75rem;
 
@@ -55,39 +55,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 280 20% 6%;
-    --foreground: 280 10% 98%;
+    --background: 280 18% 7%;
+    --foreground: 280 10% 96%;
 
-    --card: 280 20% 8%;
-    --card-foreground: 280 10% 98%;
+    --card: 280 18% 9%;
+    --card-foreground: 280 10% 96%;
 
-    --popover: 280 20% 8%;
-    --popover-foreground: 280 10% 98%;
+    --popover: 280 18% 9%;
+    --popover-foreground: 280 10% 96%;
 
-    --primary: 265 95% 70%;
+    --primary: 265 85% 72%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 25% 12%;
-    --secondary-foreground: 280 10% 98%;
+    --secondary: 280 18% 13%;
+    --secondary-foreground: 280 10% 96%;
 
-    --muted: 280 20% 12%;
-    --muted-foreground: 280 10% 65%;
+    --muted: 280 15% 13%;
+    --muted-foreground: 280 10% 62%;
 
-    --accent: 15 100% 65%;
+    --accent: 15 95% 68%;
     --accent-foreground: 0 0% 100%;
 
-    --boy: 215 90% 65%;
+    --boy: 215 80% 67%;
     --boy-foreground: 0 0% 100%;
     
-    --girl: 340 85% 70%;
+    --girl: 340 75% 72%;
     --girl-foreground: 0 0% 100%;
 
-    --destructive: 0 85% 60%;
+    --destructive: 0 80% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 280 20% 18%;
-    --input: 280 20% 18%;
-    --ring: 265 85% 65%;
+    --border: 280 15% 19%;
+    --input: 280 15% 19%;
+    --ring: 265 75% 68%;
 
     --sidebar-background: 280 15% 10%;
     --sidebar-foreground: 280 10% 90%;
