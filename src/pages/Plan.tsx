@@ -163,10 +163,10 @@ export default function Plan() {
                 <CardContent>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {topMonths.map((result, idx) => {
-                      const getBorderColor = () => {
-                        if (result.badge === 'Best') return 'border-green-500 hover:border-green-500/80';
-                        if (result.badge === 'Great') return 'border-accent hover:border-accent/80';
-                        if (result.badge === 'Good') return 'border-primary hover:border-primary/80';
+                      const getCardStyles = () => {
+                        if (result.badge === 'Best') return 'border-green-500 hover:border-green-500/80 bg-green-500/5';
+                        if (result.badge === 'Great') return 'border-accent hover:border-accent/80 bg-accent/5';
+                        if (result.badge === 'Good') return 'border-primary hover:border-primary/80 bg-primary/5';
                         return 'border-border hover:border-primary';
                       };
                       
@@ -174,7 +174,7 @@ export default function Plan() {
                         <button
                           key={`${result.date.year}-${result.date.month}`}
                           onClick={() => handleMonthClick(result.date)}
-                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${getBorderColor()}`}
+                          className={`text-left p-4 rounded-lg border-2 transition-all hover:shadow-md ${getCardStyles()}`}
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div>
