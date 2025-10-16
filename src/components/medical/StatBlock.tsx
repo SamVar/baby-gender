@@ -10,9 +10,9 @@ interface StatBlockProps {
 export default function StatBlock({ value, label, icon: Icon, color = "primary" }: StatBlockProps) {
   const colorClasses = {
     primary: "text-primary bg-primary/10 border-primary/20",
-    green: "text-primary bg-primary/10 border-primary/20",
-    blue: "text-primary bg-primary/10 border-primary/20",
-    amber: "text-accent bg-accent/10 border-accent/20",
+    green: "text-green-600 dark:text-green-400 bg-green-500/10 border-green-500/20",
+    blue: "text-blue-600 dark:text-blue-400 bg-blue-500/10 border-blue-500/20",
+    amber: "text-amber-600 dark:text-amber-400 bg-amber-500/10 border-amber-500/20",
   };
 
   return (

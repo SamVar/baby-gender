@@ -19,11 +19,11 @@ export default function TestingMethods() {
       />
       
       <div className="grid gap-6 md:grid-cols-2">
-        <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-blue-500/30 hover:border-blue-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">Routine Ultrasound (18–22 weeks)</CardTitle>
-              <Badge variant="default" className="bg-primary">High Accuracy</Badge>
+              <Badge variant="default" className="bg-blue-600 dark:bg-blue-500">High Accuracy</Badge>
             </div>
             <CardDescription>Standard anatomy scan</CardDescription>
           </CardHeader>
@@ -33,7 +33,7 @@ export default function TestingMethods() {
               <p>The anatomy scan is a comprehensive assessment of fetal development, including the brain, heart, spine, limbs, and internal organs. Sex determination is a secondary finding.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy for Sex:</p>
                   <p>95–99% accuracy when fetal position allows clear visualization. Accuracy depends on gestational age, fetal position, maternal body composition, and sonographer experience.</p>
@@ -41,7 +41,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timeline:</p>
                   <p>Results provided during the scan (same day). If position prevents visualization, you may be asked to return.</p>
@@ -49,7 +49,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Shield className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Shield className="h-4 w-4 text-purple-600 dark:text-purple-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Safety:</p>
                   <p>No known risks. Ultrasound uses sound waves, not radiation. Considered safe throughout pregnancy.</p>
@@ -57,7 +57,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost & Insurance:</p>
                   <p>Typically covered by insurance as standard prenatal care. Out-of-pocket costs vary by provider and insurance plan.</p>
@@ -67,11 +67,11 @@ export default function TestingMethods() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-green-500/30 hover:border-green-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">Cell‑free DNA / NIPT (≥10 weeks)</CardTitle>
-              <Badge variant="default" className="bg-primary">Very High Accuracy</Badge>
+              <Badge variant="default" className="bg-green-600 dark:bg-green-500">Very High Accuracy</Badge>
             </div>
             <CardDescription>Screening test from maternal blood</CardDescription>
           </CardHeader>
@@ -81,7 +81,7 @@ export default function TestingMethods() {
               <p>Screens for common chromosomal conditions including trisomy 21 (Down syndrome), trisomy 18, and trisomy 13. Analyzes fragments of placental DNA circulating in maternal blood.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy for Sex:</p>
                   <p>&gt;99% accuracy for fetal sex determination (ACOG 2020). Detects presence or absence of Y chromosome. This is a screening test—not diagnostic.</p>
@@ -89,7 +89,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Important Note:</p>
                   <p>Rare discordance can occur with vanishing twin, maternal chromosomal variations, or confined placental mosaicism. A diagnostic test confirms any concerning results.</p>
@@ -97,7 +97,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timeline:</p>
                   <p>Results typically available in 7–14 days. Some labs offer expedited results.</p>
@@ -105,7 +105,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Shield className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Shield className="h-4 w-4 text-purple-600 dark:text-purple-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Safety:</p>
                   <p>Simple blood draw with no risk to the fetus. No procedural risks.</p>
@@ -113,7 +113,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost & Insurance:</p>
                   <p>Often covered for pregnancies at increased risk. Out-of-pocket costs range from $0–$500+ depending on insurance and lab. Some labs offer self-pay options around $99–$299.</p>
@@ -123,11 +123,11 @@ export default function TestingMethods() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-accent hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-purple-500/30 hover:border-purple-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">Chorionic Villus Sampling / CVS (10–13 weeks)</CardTitle>
-              <Badge variant="default" className="bg-accent">Definitive</Badge>
+              <Badge variant="default" className="bg-purple-600 dark:bg-purple-500">Definitive</Badge>
             </div>
             <CardDescription>Diagnostic test—chromosomal analysis</CardDescription>
           </CardHeader>
@@ -137,7 +137,7 @@ export default function TestingMethods() {
               <p>Provides definitive diagnosis of chromosomal conditions and genetic disorders. Samples placental tissue (chorionic villi) for karyotype or microarray analysis.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy for Sex:</p>
                   <p>Definitive—chromosomal karyotype directly reveals XX or XY. Near 100% accuracy for typical chromosomal sex.</p>
@@ -145,7 +145,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Procedure & Risks:</p>
                   <p>Performed transabdominally or transcervically under ultrasound guidance. Procedure-related miscarriage risk approximately 0.2–0.3% (recent studies). Only recommended when medically indicated after genetic counseling.</p>
@@ -153,7 +153,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timeline:</p>
                   <p>Preliminary results (FISH) in 1–3 days. Full karyotype results in 7–14 days.</p>
@@ -161,7 +161,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost & Insurance:</p>
                   <p>Usually covered when medically indicated (e.g., abnormal NIPT, family history, advanced maternal age). Costs range $1,500–$3,000+ without insurance.</p>
@@ -171,11 +171,11 @@ export default function TestingMethods() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-accent hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-purple-500/30 hover:border-purple-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">Amniocentesis (≈15–20 weeks)</CardTitle>
-              <Badge variant="default" className="bg-accent">Definitive</Badge>
+              <Badge variant="default" className="bg-purple-600 dark:bg-purple-500">Definitive</Badge>
             </div>
             <CardDescription>Diagnostic test—amniotic fluid analysis</CardDescription>
           </CardHeader>
@@ -185,7 +185,7 @@ export default function TestingMethods() {
               <p>Provides definitive diagnosis of chromosomal conditions, genetic disorders, and neural tube defects. Samples amniotic fluid containing fetal cells.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy for Sex:</p>
                   <p>Definitive—chromosomal karyotype directly reveals XX or XY. Near 100% accuracy for typical chromosomal sex.</p>
@@ -193,7 +193,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Procedure & Risks:</p>
                   <p>Performed transabdominally under ultrasound guidance. Procedure-related miscarriage risk approximately 0.1–0.3% (contemporary studies). Only recommended when medically indicated.</p>
@@ -201,7 +201,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timeline:</p>
                   <p>Preliminary results (FISH) in 1–3 days. Full karyotype results in 7–14 days. Microarray results may take 2–3 weeks.</p>
@@ -209,7 +209,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost & Insurance:</p>
                   <p>Usually covered when medically indicated. Costs range $1,500–$3,500+ without insurance, depending on analysis type.</p>
@@ -219,11 +219,11 @@ export default function TestingMethods() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-muted-foreground/30 hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-orange-500/30 hover:border-orange-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">Early Commercial Blood Tests</CardTitle>
-              <Badge variant="outline" className="border-muted-foreground">Variable</Badge>
+              <Badge variant="outline" className="border-orange-500 text-orange-600 dark:text-orange-400">Variable</Badge>
             </div>
             <CardDescription>Non‑clinical, direct-to-consumer products</CardDescription>
           </CardHeader>
@@ -233,7 +233,7 @@ export default function TestingMethods() {
               <p>Commercial tests marketed for early sex prediction (as early as 6–10 weeks), typically using maternal blood sample collected at home or in a retail location.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy Concerns:</p>
                   <p>Not FDA-approved for clinical decision-making. Accuracy varies widely and is lower than medical-grade NIPT. Prone to contamination from improper collection, maternal DNA, or external sources.</p>
@@ -241,7 +241,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-destructive mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Clinical Guidance:</p>
                   <p>ACOG and other professional societies do not recommend these tests for medical purposes. Should never replace medical testing or guide pregnancy decisions.</p>
@@ -249,7 +249,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timeline:</p>
                   <p>Results typically in 5–10 business days after sample received by lab.</p>
@@ -257,7 +257,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost:</p>
                   <p>Typically $50–$200 out-of-pocket. Not covered by insurance.</p>
@@ -267,11 +267,11 @@ export default function TestingMethods() {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-muted-foreground/30 hover:shadow-lg transition-shadow">
+        <Card className="border-2 border-slate-400/30 hover:border-slate-400/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-bold">3D/4D Ultrasound</CardTitle>
-              <Badge variant="outline" className="border-muted-foreground">Same as 2D</Badge>
+              <Badge variant="outline" className="border-slate-500 text-slate-600 dark:text-slate-400">Same as 2D</Badge>
             </div>
             <CardDescription>Elective keepsake imaging</CardDescription>
           </CardHeader>
@@ -281,7 +281,7 @@ export default function TestingMethods() {
               <p>Optional ultrasound performed for photos and videos of the baby. Uses the same technology as medical ultrasound but renders 3D images or real-time 4D video.</p>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Accuracy for Sex:</p>
                   <p>No more accurate than standard 2D medical ultrasound. Accuracy still depends on fetal position and gestational age, not imaging dimension.</p>
@@ -289,7 +289,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <AlertCircle className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <AlertCircle className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Clinical Guidance:</p>
                   <p>FDA and ACOG discourage non-medical ultrasound solely for keepsake purposes. While considered low-risk, unnecessary ultrasound exposure is not recommended. If performed, should be brief and by trained professionals.</p>
@@ -297,7 +297,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <Clock className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Timing:</p>
                   <p>Typically performed 24–34 weeks for best facial visualization. Earlier or later may produce less detailed images.</p>
@@ -305,7 +305,7 @@ export default function TestingMethods() {
               </div>
               
               <div className="flex items-start gap-2 mt-3">
-                <DollarSign className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <DollarSign className="h-4 w-4 text-green-600 dark:text-green-400 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Cost:</p>
                   <p>$100–$300+ depending on package and session length. Not covered by insurance.</p>
