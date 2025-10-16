@@ -4,10 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 export default function Header() {
   return (
     <header className="text-center space-y-6 mb-10 animate-fade-in">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10">
-        <Stethoscope className="h-8 w-8 text-accent" />
-      </div>
-      <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+      <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent flex items-center justify-center gap-3">
+        <Stethoscope className="h-10 w-10 md:h-12 md:w-12 text-accent" />
         Medical Information
       </h1>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

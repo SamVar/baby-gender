@@ -15,10 +15,8 @@ export default function Science() {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-boy/10 mb-4">
-              <Microscope className="h-8 w-8 text-boy" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-boy to-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-boy to-primary bg-clip-text text-transparent flex items-center justify-center gap-3">
+              <Microscope className="h-10 w-10 md:h-12 md:w-12 text-boy" />
               Science & Statistics 🔬
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

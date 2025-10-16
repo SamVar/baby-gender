@@ -13,10 +13,8 @@ export default function Culture() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-4 mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-girl/10 mb-4">
-              <Globe className="h-8 w-8 text-girl" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-girl to-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-girl to-accent bg-clip-text text-transparent flex items-center justify-center gap-3">
+              <Globe className="h-10 w-10 md:h-12 md:w-12 text-girl" />
               Cultural Perspectives 🌍
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
