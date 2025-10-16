@@ -99,16 +99,18 @@ export function calculateProbabilities(scores: BloodScore): Probability {
 }
 
 /**
- * Determine label based on score difference
+ * Determine label based on probabilities
  */
 export function determineLabel(scores: BloodScore): MonthResult['label'] {
-  const diff = scores.male - scores.female;
+  const probabilities = calculateProbabilities(scores);
+  const diff = Math.abs(probabilities.boy - probabilities.girl);
   
-  if (Math.abs(diff) < 0.10) {
+  // If the difference in probabilities is less than 20%, it's too close to call
+  if (diff < 0.20) {
     return 'Too Close to Call';
   }
   
-  return diff >= 0.10 ? 'Leans Boy' : 'Leans Girl';
+  return probabilities.boy > probabilities.girl ? 'Leans Boy' : 'Leans Girl';
 }
 
 /**
