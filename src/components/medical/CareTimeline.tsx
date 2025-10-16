@@ -2,12 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function CareTimeline() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Pregnancy care timeline</h2>
-        <p className="text-muted-foreground">Typical milestones; schedules vary by clinic.</p>
-      </div>
-      <div className="grid gap-4 md:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-3 animate-fade-in">
         <Card>
           <CardHeader>
             <CardTitle className="text-base">First trimester</CardTitle>
@@ -44,7 +39,6 @@ export default function CareTimeline() {
             </ul>
           </CardContent>
         </Card>
-      </div>
-    </section>
+    </div>
   );
 }

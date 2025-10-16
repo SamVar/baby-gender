@@ -3,13 +3,7 @@ import { Stethoscope, Users, Scale, Globe } from "lucide-react";
 
 export default function ClinicalPerspective() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Clinical perspective</h2>
-        <p className="text-muted-foreground">Understanding how and why healthcare providers approach prenatal sex determination.</p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-2">
+    <div className="grid gap-4 md:grid-cols-2 animate-fade-in">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -167,7 +161,6 @@ export default function ClinicalPerspective() {
             <p>You are the expert on your own life and values. Your provider is the expert on medicine. Together, you make the best decisions for your pregnancy and your family.</p>
           </CardContent>
         </Card>
-      </div>
-    </section>
+    </div>
   );
 }

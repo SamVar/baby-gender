@@ -1,4 +1,5 @@
 export { default as Header } from "./Header";
+export { default as SectionHeader } from "./SectionHeader";
 export { default as DevelopmentTimeline } from "./DevelopmentTimeline";
 export { default as TestingMethods } from "./TestingMethods";
 export { default as TestComparison } from "./TestComparison";

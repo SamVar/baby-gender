@@ -3,11 +3,7 @@ import { XCircle } from "lucide-react";
 
 export default function MedicalMyths() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Medical view on common myths</h2>
-        <p className="text-muted-foreground">Fun to guess, but not medically reliable—here's what the science says.</p>
-      </div>
+    <div className="space-y-4 animate-fade-in">
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -104,6 +100,6 @@ export default function MedicalMyths() {
         <p className="font-medium text-foreground">Bottom line:</p>
         <p>These methods can be fun to try for entertainment, but they have no scientific validity. If you want to know your baby's sex, ultrasound, NIPT, or diagnostic testing are the only reliable options.</p>
       </div>
-    </section>
+    </div>
   );
 }

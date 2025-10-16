@@ -4,13 +4,7 @@ import { Clock, DollarSign, Shield, AlertCircle, CheckCircle2 } from "lucide-rea
 
 export default function TestingMethods() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Medical testing methods</h2>
-        <p className="text-muted-foreground">Comprehensive overview of screening and diagnostic approaches with accuracy, timing, and clinical context.</p>
-      </div>
-      
-      <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-2 animate-fade-in">
         <Card className="border-l-4 border-l-blue-500">
           <CardHeader>
             <div className="flex items-center justify-between">
@@ -306,7 +300,6 @@ export default function TestingMethods() {
             </div>
           </CardContent>
         </Card>
-      </div>
-    </section>
+    </div>
   );
 }

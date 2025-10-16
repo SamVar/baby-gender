@@ -4,13 +4,7 @@ import { AlertCircle, Info } from "lucide-react";
 
 export default function ConditionsAndVariations() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Conditions and variations</h2>
-        <p className="text-muted-foreground">Understanding differences in sex development, chromosomal variations, and when standard determination is challenging.</p>
-      </div>
-      
-      <div className="space-y-4">
+    <div className="space-y-4 animate-fade-in">
         <Card className="border-l-4 border-l-purple-500">
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -187,6 +181,6 @@ export default function ConditionsAndVariations() {
         <p className="font-medium text-foreground">If you have concerns:</p>
         <p>Always discuss questions about sex determination, chromosomal conditions, or unexpected findings with your healthcare provider or a genetic counselor. They can provide personalized guidance, connect you with specialists, and help you access support resources.</p>
       </div>
-    </section>
+    </div>
   );
 }

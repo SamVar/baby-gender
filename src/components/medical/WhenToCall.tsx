@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function WhenToCall() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div className="flex items-center gap-2">
+    <div className="animate-fade-in">
+      <div className="flex items-center gap-2 mb-4">
         <AlertCircle className="h-5 w-5 text-destructive" />
-        <h2 className="text-2xl font-semibold">When to contact your provider</h2>
+        <h3 className="text-xl font-semibold">When to contact your provider</h3>
       </div>
       <Card>
         <CardHeader>
@@ -20,6 +20,6 @@ export default function WhenToCall() {
           </ul>
         </CardContent>
       </Card>
-    </section>
+    </div>
   );
 }

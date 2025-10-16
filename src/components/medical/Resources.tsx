@@ -2,9 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Resources() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Trusted resources</h2>
+    <div className="animate-fade-in">
+      <div className="mb-4">
+        <h3 className="text-xl font-semibold mb-1">Trusted resources</h3>
         <p className="text-muted-foreground">Further reading and patient‑friendly references.</p>
       </div>
       <Card>
@@ -22,6 +22,6 @@ export default function Resources() {
           </ul>
         </CardContent>
       </Card>
-    </section>
+    </div>
   );
 }

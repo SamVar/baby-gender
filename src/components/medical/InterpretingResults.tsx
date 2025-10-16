@@ -4,13 +4,7 @@ import { AlertCircle, CheckCircle2, HelpCircle, Heart } from "lucide-react";
 
 export default function InterpretingResults() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Understanding and interpreting results</h2>
-        <p className="text-muted-foreground">How results are communicated, what they mean, and next steps.</p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-2">
+    <div className="grid gap-4 md:grid-cols-2 animate-fade-in">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -165,7 +159,6 @@ export default function InterpretingResults() {
             <p>You have time to ask questions, seek second opinions, and make informed decisions that feel right for you and your family. There is no rush, and you deserve compassionate, patient-centered care.</p>
           </CardContent>
         </Card>
-      </div>
-    </section>
+    </div>
   );
 }

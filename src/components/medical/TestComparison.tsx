@@ -4,12 +4,7 @@ import { CheckCircle2, Clock, DollarSign, Shield } from "lucide-react";
 
 export default function TestComparison() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Test comparison at a glance</h2>
-        <p className="text-muted-foreground">Side-by-side comparison to help you understand your options.</p>
-      </div>
-      
+    <div className="space-y-4 animate-fade-in">
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
@@ -220,6 +215,6 @@ export default function TestComparison() {
           <li>Discuss timing, costs, and risks with your provider to make informed choices for your pregnancy.</li>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

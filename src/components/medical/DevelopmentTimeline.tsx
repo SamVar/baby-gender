@@ -3,13 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function DevelopmentTimeline() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Prenatal development timeline</h2>
-        <p className="text-muted-foreground">How and when sex characteristics develop and become visible during pregnancy.</p>
-      </div>
-      
-      <div className="space-y-6">
+    <div className="space-y-6 animate-fade-in">
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
@@ -100,6 +94,6 @@ export default function DevelopmentTimeline() {
           <li>Fetal position is a major factor in whether sex can be determined on any given scan.</li>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

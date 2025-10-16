@@ -3,11 +3,7 @@ import { MessageSquare } from "lucide-react";
 
 export default function QuestionsForProvider() {
   return (
-    <section className="space-y-4 animate-fade-in">
-      <div>
-        <h2 className="text-2xl font-semibold">Questions to ask your provider</h2>
-        <p className="text-muted-foreground">Prepare for your appointments with these thoughtful questions about prenatal testing and sex determination.</p>
-      </div>
+    <div className="space-y-4 animate-fade-in">
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -148,6 +144,6 @@ export default function QuestionsForProvider() {
           <li>Remember: there are no "silly" questions—your provider is there to help you feel informed and confident</li>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }
