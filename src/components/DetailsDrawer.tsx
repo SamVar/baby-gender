@@ -65,7 +65,7 @@ export function DetailsDrawer({ open, onOpenChange, maleDOB, femaleDOB, result }
           </div>
 
           {/* Male Cycle Details */}
-          <div className="space-y-3 rounded-lg bg-boy/5 p-4 border border-boy/20">
+          <div className="space-y-3 rounded-lg bg-boy/15 p-4 border-2 border-boy/40">
             <h4 className="font-semibold text-boy">Male Cycle</h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -93,7 +93,7 @@ export function DetailsDrawer({ open, onOpenChange, maleDOB, femaleDOB, result }
           </div>
 
           {/* Female Cycle Details */}
-          <div className="space-y-3 rounded-lg bg-girl/5 p-4 border border-girl/20">
+          <div className="space-y-3 rounded-lg bg-girl/15 p-4 border-2 border-girl/40">
             <h4 className="font-semibold text-girl">Female Cycle</h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
