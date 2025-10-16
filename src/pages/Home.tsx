@@ -14,7 +14,7 @@ export default function Home() {
   const [isGirlHovered, setIsGirlHovered] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20 animate-fade-in">
       <Navigation />
       
       <header className="container mx-auto px-4 py-8 pt-16 relative">

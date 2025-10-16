@@ -7,7 +7,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 animate-fade-in">
       <Navigation />
       
       <header className="container mx-auto px-4 py-6">
