@@ -100,7 +100,7 @@ export default function Plan() {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-12">
           {/* Input Card */}
           <Card>
             <CardHeader>
