@@ -3,7 +3,14 @@ import { MessageSquare } from "lucide-react";
 
 export default function QuestionsForProvider() {
   return (
-    <div className="space-y-4 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
+      <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-lg p-6">
+        <h3 className="text-lg font-bold mb-2">Preparing for Your Appointment</h3>
+        <p className="text-sm text-muted-foreground">
+          These questions can help you have productive conversations with your healthcare provider about prenatal testing and sex determination. Feel free to bring this list to your appointments.
+        </p>
+      </div>
+
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
@@ -14,13 +21,11 @@ export default function QuestionsForProvider() {
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
-              <li>What prenatal screening and diagnostic tests do you recommend for my pregnancy?</li>
-              <li>When will I have my first ultrasound, and what will it check?</li>
-              <li>Am I a candidate for NIPT? When can it be performed?</li>
-              <li>What factors (age, family history, prior pregnancies) might affect my testing plan?</li>
-              <li>How do you approach prenatal testing and informed consent?</li>
-              <li>Can I choose to decline any tests? What are the implications?</li>
-              <li>If I want to know the sex of my baby, when is the earliest reliable time?</li>
+              <li className="text-base">What prenatal screening and diagnostic tests do you recommend for my pregnancy?</li>
+              <li className="text-base">When will I have my first ultrasound, and what will it check?</li>
+              <li className="text-base">Am I a candidate for NIPT? When can it be performed?</li>
+              <li className="text-base">What factors might affect my testing plan?</li>
+              <li className="text-base">If I want to know the sex, when is the earliest reliable time?</li>
             </ul>
           </CardContent>
         </Card>
@@ -34,15 +39,11 @@ export default function QuestionsForProvider() {
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
-              <li>What conditions will this test screen for beyond fetal sex?</li>
-              <li>What is the detection rate (sensitivity) and false positive rate for each condition?</li>
-              <li>Is this a screening test or a diagnostic test? What's the difference?</li>
-              <li>What happens if the test comes back "high-risk" or "positive" for a condition?</li>
-              <li>How long until I receive results?</li>
-              <li>Will you offer genetic counseling if results are concerning?</li>
-              <li>What is the cost, and is it typically covered by my insurance?</li>
-              <li>What if the test fails or is inconclusive? Will I need to repeat it?</li>
-              <li>Can rare conditions (like vanishing twin or mosaicism) affect the sex result?</li>
+              <li className="text-base">What conditions will this test screen for?</li>
+              <li className="text-base">What is the detection rate and false positive rate?</li>
+              <li className="text-base">What happens if results are "high-risk"?</li>
+              <li className="text-base">How long until I receive results?</li>
+              <li className="text-base">What is the cost and insurance coverage?</li>
             </ul>
           </CardContent>
         </Card>
@@ -56,15 +57,11 @@ export default function QuestionsForProvider() {
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
-              <li>What will you be checking during this ultrasound?</li>
-              <li>How accurate is sex determination at this stage?</li>
-              <li>What if the baby isn't in a good position to see the genitalia?</li>
-              <li>Will you check for any "soft markers" for chromosomal conditions?</li>
-              <li>If you find a soft marker, what does that mean, and what are the next steps?</li>
-              <li>How soon will I get the results?</li>
-              <li>Can my partner or family member be present during the scan?</li>
-              <li>If something unexpected is seen, how will you communicate that to me?</li>
-              <li>Will I need a follow-up scan if position prevents full assessment?</li>
+              <li className="text-base">What will you be checking during this ultrasound?</li>
+              <li className="text-base">How accurate is sex determination at this stage?</li>
+              <li className="text-base">What if the baby isn't in a good position?</li>
+              <li className="text-base">Will you check for any "soft markers"?</li>
+              <li className="text-base">How soon will I get results?</li>
             </ul>
           </CardContent>
         </Card>

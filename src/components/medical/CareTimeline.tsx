@@ -2,7 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function CareTimeline() {
   return (
-    <div className="grid gap-4 md:grid-cols-3 animate-fade-in">
+    <div className="space-y-6 animate-fade-in">
+      <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader>
             <CardTitle className="text-base">First trimester</CardTitle>
@@ -39,6 +40,13 @@ export default function CareTimeline() {
             </ul>
           </CardContent>
         </Card>
+      </div>
+      
+      <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mt-6">
+        <p className="text-sm text-muted-foreground">
+          <span className="font-semibold text-foreground">Note:</span> Every pregnancy and clinic is different. Your schedule may vary based on your health, pregnancy complexity, and provider's recommendations. Always follow your healthcare team's guidance.
+        </p>
+      </div>
     </div>
   );
 }

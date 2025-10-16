@@ -1,10 +1,37 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircle, CheckCircle2, HelpCircle, Heart } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function InterpretingResults() {
   return (
-    <div className="grid gap-4 md:grid-cols-2 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
+      {/* Quick overview section */}
+      <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-6">
+        <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+          <HelpCircle className="h-5 w-5 text-blue-600" />
+          Understanding Your Results: Quick Overview
+        </h3>
+        <div className="grid md:grid-cols-2 gap-4 text-sm">
+          <div>
+            <p className="font-semibold text-foreground mb-1">Screening Tests (NIPT, Ultrasound)</p>
+            <p className="text-muted-foreground">Provide probability or likelihood—not a diagnosis. High accuracy but not 100% definitive.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-foreground mb-1">Diagnostic Tests (CVS, Amniocentesis)</p>
+            <p className="text-muted-foreground">Provide definitive chromosomal information. Near 100% accuracy.</p>
+          </div>
+        </div>
+      </div>
+
+      <Tabs defaultValue="communication" className="w-full">
+        <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3">
+          <TabsTrigger value="communication">How Results Come</TabsTrigger>
+          <TabsTrigger value="screening">Screening vs Diagnostic</TabsTrigger>
+          <TabsTrigger value="concerns">When Issues Arise</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="communication" className="space-y-6 mt-6">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -27,6 +54,9 @@ export default function InterpretingResults() {
             </div>
           </CardContent>
         </Card>
+        </TabsContent>
+
+        <TabsContent value="screening" className="space-y-6 mt-6">
 
         <Card className="border-l-4 border-l-amber-500">
           <CardHeader>
@@ -72,6 +102,9 @@ export default function InterpretingResults() {
             </div>
           </CardContent>
         </Card>
+        </TabsContent>
+
+        <TabsContent value="concerns" className="space-y-6 mt-6">
 
         <Card>
           <CardHeader>
@@ -159,6 +192,8 @@ export default function InterpretingResults() {
             <p>You have time to ask questions, seek second opinions, and make informed decisions that feel right for you and your family. There is no rush, and you deserve compassionate, patient-centered care.</p>
           </CardContent>
         </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

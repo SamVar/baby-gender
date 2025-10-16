@@ -1,10 +1,24 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, DollarSign, Shield, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Clock, DollarSign, Shield, AlertCircle, CheckCircle2, Microscope } from "lucide-react";
+import QuickSummaryCard from "./QuickSummaryCard";
 
 export default function TestingMethods() {
   return (
-    <div className="grid gap-6 md:grid-cols-2 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
+      <QuickSummaryCard 
+        title="6 Ways to Determine Fetal Sex"
+        icon={Microscope}
+        items={[
+          "Ultrasound (18–22 weeks): 95-99% accurate, standard prenatal care",
+          "NIPT (10+ weeks): >99% accurate, screening test from blood sample",
+          "CVS/Amniocentesis: Definitive chromosomal analysis, medical indication only",
+          "Commercial tests: Variable accuracy, not recommended for medical purposes",
+          "3D/4D ultrasound: Same accuracy as standard 2D ultrasound",
+        ]}
+      />
+      
+      <div className="grid gap-6 md:grid-cols-2">
         <Card className="border-l-4 border-l-blue-500">
           <CardHeader>
             <div className="flex items-center justify-between">
@@ -300,6 +314,7 @@ export default function TestingMethods() {
             </div>
           </CardContent>
         </Card>
+      </div>
     </div>
   );
 }

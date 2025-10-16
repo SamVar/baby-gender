@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircle, Info } from "lucide-react";
+import KeyTakeaways from "./KeyTakeaways";
 
 export default function ConditionsAndVariations() {
   return (
@@ -176,10 +177,13 @@ export default function ConditionsAndVariations() {
           </CardContent>
         </Card>
 
-      <div className="text-sm text-muted-foreground space-y-2 border-l-4 border-l-purple-500 pl-4 py-2 mt-6">
-        <p className="font-medium text-foreground">If you have concerns:</p>
-        <p>Always discuss questions about sex determination, chromosomal conditions, or unexpected findings with your healthcare provider or a genetic counselor. They can provide personalized guidance, connect you with specialists, and help you access support resources.</p>
-      </div>
+      <KeyTakeaways
+        title="If you have concerns"
+        items={[
+          "Always discuss questions about sex determination, chromosomal conditions, or unexpected findings with your healthcare provider or a genetic counselor.",
+          "They can provide personalized guidance, connect you with specialists, and help you access support resources.",
+        ]}
+      />
     </div>
   );
 }

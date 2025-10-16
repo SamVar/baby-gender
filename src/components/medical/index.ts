@@ -1,5 +1,9 @@
 export { default as Header } from "./Header";
 export { default as SectionHeader } from "./SectionHeader";
+export { default as QuickSummaryCard } from "./QuickSummaryCard";
+export { default as ExpandableContent } from "./ExpandableContent";
+export { default as StatBlock } from "./StatBlock";
+export { default as KeyTakeaways } from "./KeyTakeaways";
 export { default as DevelopmentTimeline } from "./DevelopmentTimeline";
 export { default as TestingMethods } from "./TestingMethods";
 export { default as TestComparison } from "./TestComparison";

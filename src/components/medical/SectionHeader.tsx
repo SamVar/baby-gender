@@ -15,19 +15,19 @@ export default function SectionHeader({
   sectionNumber 
 }: SectionHeaderProps) {
   return (
-    <div className="mb-8 animate-fade-in">
-      <div className="flex items-center gap-3 mb-3">
-        <div className="h-1 w-12 bg-primary rounded" />
+    <div className="mb-10 animate-fade-in">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="h-1.5 w-16 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
         {sectionNumber && (
-          <Badge variant="outline" className="text-xs font-medium">
+          <Badge variant="outline" className="text-xs font-semibold px-3 py-1 bg-primary/5">
             Section {sectionNumber}
           </Badge>
         )}
-        {Icon && <Icon className="h-5 w-5 text-primary" />}
+        {Icon && <Icon className="h-6 w-6 text-primary" />}
       </div>
-      <h2 className="text-3xl md:text-4xl font-bold mb-2">{title}</h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">{title}</h2>
       {description && (
-        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed">
           {description}
         </p>
       )}

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import KeyTakeaways from "./KeyTakeaways";
 
 export default function DevelopmentTimeline() {
   return (
@@ -84,15 +85,14 @@ export default function DevelopmentTimeline() {
           </CardContent>
         </Card>
 
-      <div className="text-sm text-muted-foreground space-y-2 border-l-4 border-l-blue-500 pl-4 py-2 mt-6">
-        <p className="font-medium text-foreground">Key takeaways:</p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Chromosomal sex is determined at conception, but external structures take weeks to differentiate.</li>
-          <li>The 18–22 week anatomy scan is the standard time for sex visualization—accurate in 95–99% of cases when position allows.</li>
-          <li>Earlier determination (11–14 weeks) is possible but less reliable and not standard practice.</li>
-          <li>Fetal position is a major factor in whether sex can be determined on any given scan.</li>
-        </ul>
-      </div>
+      <KeyTakeaways 
+        items={[
+          "Chromosomal sex is determined at conception, but external structures take weeks to differentiate.",
+          "The 18–22 week anatomy scan is the standard time for sex visualization—accurate in 95–99% of cases when position allows.",
+          "Earlier determination (11–14 weeks) is possible but less reliable and not standard practice.",
+          "Fetal position is a major factor in whether sex can be determined on any given scan.",
+        ]}
+      />
     </div>
   );
 }
