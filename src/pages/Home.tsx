@@ -113,8 +113,8 @@ export default function Home() {
             </Card>
           </div>
 
-          <section className="pt-32">
-            <div className="flex items-center justify-center gap-12 mb-16">
+          <section className="pt-24">
+            <div className="flex items-center justify-center gap-8 mb-16">
               <Link
                 to="/plan?gender=boy"
                 className="flex flex-col items-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="text-center pb-24">
+          <div className="text-center pb-24 -mt-8">
             <Button variant="ghost" asChild>
               <Link to="/about" className="text-muted-foreground md:hover:text-primary-foreground">
                 Learn how it works →
