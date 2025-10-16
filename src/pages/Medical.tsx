@@ -19,7 +19,7 @@ import { Activity, FileSearch, MessageSquare, AlertTriangle, Stethoscope, Calend
 export default function Medical() {
   const canonical = `${window.location.origin}/medical`;
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 animate-fade-in">
       <Seo
         title="Medical Information | Prenatal Sex Determination"
         description="Evidence-based overview of ultrasound, NIPT, and diagnostic tests for fetal sex determination, with timelines and questions for your provider."
