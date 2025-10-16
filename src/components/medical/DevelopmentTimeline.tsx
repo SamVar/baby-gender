@@ -83,7 +83,6 @@ export default function DevelopmentTimeline() {
             <p><strong>Clinical note:</strong> If sex was determined earlier and later imaging shows conflicting information, diagnostic testing may be recommended to clarify.</p>
           </CardContent>
         </Card>
-      </div>
 
       <div className="text-sm text-muted-foreground space-y-2 border-l-4 border-l-blue-500 pl-4 py-2 mt-6">
         <p className="font-medium text-foreground">Key takeaways:</p>

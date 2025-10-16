@@ -175,7 +175,6 @@ export default function ConditionsAndVariations() {
             <p>Navigating uncertain or unexpected information can be stressful. Don't hesitate to ask questions, seek second opinions, and reach out for emotional support. You're not alone in this process.</p>
           </CardContent>
         </Card>
-      </div>
 
       <div className="text-sm text-muted-foreground space-y-2 border-l-4 border-l-purple-500 pl-4 py-2 mt-6">
         <p className="font-medium text-foreground">If you have concerns:</p>
