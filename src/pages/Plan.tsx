@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { Navigation } from "@/components/Navigation";
 import { DOBPicker } from "@/components/DOBPicker";
 import { HeatmapCalendar } from "@/components/HeatmapCalendar";
 import { ProbabilityRing } from "@/components/ProbabilityRing";
@@ -10,7 +10,7 @@ import { ResultBadge } from "@/components/ResultBadge";
 import { LabelBadge } from "@/components/LabelBadge";
 import { DetailsDrawer } from "@/components/DetailsDrawer";
 import { DateInput, Sex, planBestMonthsStrict, generateMonthRange, calculateMonthResult } from "@/lib/bloodFreshness";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const MONTH_NAMES = [
@@ -82,21 +82,15 @@ export default function Plan() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/" aria-label="Back to home">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-          </Button>
-          <div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Plan Mode
-            </h1>
-            <p className="text-sm text-muted-foreground">Find the best dates for your desired baby gender</p>
-          </div>
+      <Navigation />
+      
+      <header className="container mx-auto px-4 py-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Plan Mode
+          </h1>
+          <p className="text-sm text-muted-foreground">Find the best dates for your desired baby gender</p>
         </div>
-        
       </header>
 
       <main className="container mx-auto px-4 py-8">

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Navigation } from "@/components/Navigation";
 import babyBoyImg from "@/assets/baby-boy-full.png";
 import babyGirlImg from "@/assets/baby-girl-full.png";
 import babyBoyHoverImg from "@/assets/baby-boy-hover.png";
 import babyGirlHoverImg from "@/assets/baby-girl-hover.png";
-import { Calendar, Baby, Info } from "lucide-react";
+import { Calendar, Baby } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -14,13 +15,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
-      <header className="container mx-auto px-4 py-8 pt-24 relative">
-        <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
-          <Link to="/about" aria-label="About">
-            <Info className="h-5 w-5" />
-          </Link>
-        </Button>
-
+      <Navigation />
+      
+      <header className="container mx-auto px-4 py-8 pt-16 relative">
         <div className="text-center space-y-4 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary from-5% via-primary/40 via-40% to-accent to-75% bg-clip-text text-transparent drop-shadow-lg">
             Baby Gender Planner
@@ -159,7 +156,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="text-center pb-24 -mt-8">
+          <div className="text-center pb-16 -mt-8">
             <Button variant="ghost" asChild>
               <Link to="/about" className="text-muted-foreground md:hover:text-primary-foreground">
                 Learn how it works →

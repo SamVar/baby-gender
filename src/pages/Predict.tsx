@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { Navigation } from "@/components/Navigation";
 import { DOBPicker } from "@/components/DOBPicker";
 import { ProbabilityRing } from "@/components/ProbabilityRing";
 import { LabelBadge } from "@/components/LabelBadge";
 import { DetailsDrawer } from "@/components/DetailsDrawer";
 import { DateInput, calculateMonthResult, estimateConceptionWindow, generateMonthRange, calculateWeightedAverage } from "@/lib/bloodFreshness";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -83,21 +82,15 @@ export default function Predict() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/" aria-label="Back to home">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-          </Button>
-          <div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Predict Mode
-            </h1>
-            <p className="text-sm text-muted-foreground">Estimate baby gender based on conception date</p>
-          </div>
+      <Navigation />
+      
+      <header className="container mx-auto px-4 py-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Predict Mode
+          </h1>
+          <p className="text-sm text-muted-foreground">Estimate baby gender based on conception date</p>
         </div>
-        
       </header>
 
       <main className="container mx-auto px-4 py-8">
