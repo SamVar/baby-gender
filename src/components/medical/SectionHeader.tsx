@@ -17,15 +17,14 @@ export default function SectionHeader({
   return (
     <div className="mb-10 animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
-        <div className="h-1.5 w-16 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
         {sectionNumber && (
-          <Badge variant="outline" className="text-xs font-semibold px-3 py-1 bg-primary/5">
+          <Badge variant="outline" className="text-xs font-semibold px-3 py-1 bg-primary/10 border-primary/20">
             Section {sectionNumber}
           </Badge>
         )}
         {Icon && <Icon className="h-6 w-6 text-primary" />}
       </div>
-      <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">{title}</h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-3 text-foreground">{title}</h2>
       {description && (
         <p className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed">
           {description}

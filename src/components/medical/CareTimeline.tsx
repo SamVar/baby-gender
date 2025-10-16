@@ -4,9 +4,9 @@ export default function CareTimeline() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="grid gap-4 md:grid-cols-3">
-        <Card>
+        <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
           <CardHeader>
-            <CardTitle className="text-base">First trimester</CardTitle>
+            <CardTitle className="text-lg font-bold">First Trimester</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
@@ -16,9 +16,9 @@ export default function CareTimeline() {
             </ul>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
           <CardHeader>
-            <CardTitle className="text-base">Second trimester</CardTitle>
+            <CardTitle className="text-lg font-bold">Second Trimester</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
@@ -28,9 +28,9 @@ export default function CareTimeline() {
             </ul>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
           <CardHeader>
-            <CardTitle className="text-base">Third trimester</CardTitle>
+            <CardTitle className="text-lg font-bold">Third Trimester</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground space-y-2">
             <ul className="list-disc list-inside space-y-1">
@@ -42,7 +42,7 @@ export default function CareTimeline() {
         </Card>
       </div>
       
-      <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mt-6">
+      <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mt-6">
         <p className="text-sm text-muted-foreground">
           <span className="font-semibold text-foreground">Note:</span> Every pregnancy and clinic is different. Your schedule may vary based on your health, pregnancy complexity, and provider's recommendations. Always follow your healthcare team's guidance.
         </p>

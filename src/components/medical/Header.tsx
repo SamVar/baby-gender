@@ -15,21 +15,21 @@ export default function Header() {
       </p>
 
       <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
-        <Card className="border-2 border-accent/30">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Earliest accurate screening</CardTitle>
-            <CardDescription className="text-sm">From 10 weeks</CardDescription>
+        <Card className="border-2 border-primary/30 hover:border-primary/50 transition-colors">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg font-bold">Earliest Accurate Screening</CardTitle>
+            <CardDescription className="text-sm font-medium">From 10 weeks</CardDescription>
           </CardHeader>
           <CardContent className="flex items-center gap-3">
-            <Activity className="h-5 w-5 text-accent" />
+            <Activity className="h-5 w-5 text-primary" />
             <p className="text-sm text-muted-foreground">Cell‑free DNA (NIPT) can report fetal sex; screening, not diagnostic</p>
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-primary/20">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Anatomy ultrasound</CardTitle>
-            <CardDescription className="text-sm">18–22 weeks</CardDescription>
+        <Card className="border-2 border-primary/30 hover:border-primary/50 transition-colors">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg font-bold">Anatomy Ultrasound</CardTitle>
+            <CardDescription className="text-sm font-medium">18–22 weeks</CardDescription>
           </CardHeader>
           <CardContent className="flex items-center gap-3">
             <FileText className="h-5 w-5 text-primary" />
@@ -37,12 +37,13 @@ export default function Header() {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-secondary/30">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Diagnostic options</CardTitle>
-            <CardDescription className="text-sm">CVS 10–13w, Amnio 15–20w</CardDescription>
+        <Card className="border-2 border-primary/30 hover:border-primary/50 transition-colors">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg font-bold">Diagnostic Options</CardTitle>
+            <CardDescription className="text-sm font-medium">CVS 10–13w, Amnio 15–20w</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex items-center gap-3">
+            <Stethoscope className="h-5 w-5 text-primary" />
             <p className="text-sm text-muted-foreground">Definitive chromosome analysis when medically indicated</p>
           </CardContent>
         </Card>
