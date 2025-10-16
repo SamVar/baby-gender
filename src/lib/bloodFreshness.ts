@@ -279,7 +279,7 @@ export function planBestMonthsStrict(
   
   // Sort by date (chronological order - earliest first)
   collectedResults.sort((a, b) => {
-    return monthsSince(a.date, b.date);
+    return monthsSince(b.date, a.date);
   });
 
   // Return exactly topN months (sorted by date)
