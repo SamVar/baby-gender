@@ -699,42 +699,6 @@ export default function Myths() {
                 </CardContent>
               </Card>
 
-              {/* Drano Warning */}
-              <Card className="border-l-4 border-l-destructive">
-                <CardHeader>
-                  <CardTitle className="text-lg">Drano Test ⚠️ DANGEROUS</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-destructive mb-2">The Method</h4>
-                    <p className="text-muted-foreground">Mix Drano crystal drain cleaner with urine. Different color changes (green, blue, brown) supposedly indicate different genders.</p>
-                  </div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <Badge variant="outline" className="text-base px-3 py-1">~50% Accuracy (No Evidence)</Badge>
-                    <Badge variant="destructive" className="px-3 py-1">⚠️ DANGEROUS - NEVER TRY THIS</Badge>
-                  </div>
-                  <div>
-                    <Alert variant="destructive" className="border-2">
-                      <AlertCircle className="h-5 w-5" />
-                      <AlertDescription className="text-base">
-                        <strong>SERIOUS DANGER WARNING:</strong> This test is extremely dangerous and should NEVER be attempted. Drano contains sodium hydroxide (lye), which is highly caustic. When mixed with liquid, it:
-                        <ul className="mt-2 space-y-1 list-disc list-inside">
-                          <li>Releases toxic fumes that can damage lungs and airways</li>
-                          <li>Can cause severe chemical burns if splashed on skin</li>
-                          <li>Can explode or boil violently during the reaction</li>
-                          <li>Creates heat that can cause container to crack or burst</li>
-                          <li>Produces dangerous chlorine gas and other toxic chemicals</li>
-                        </ul>
-                        <p className="mt-2 font-bold">There is absolutely NO scientific validity to this test. DO NOT attempt it under any circumstances. Multiple women have been injured trying this dangerous "test."</p>
-                      </AlertDescription>
-                    </Alert>
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground"><strong>Safe Alternative:</strong> If you're interested in pH-based tests for fun, use the baking soda or red cabbage methods instead—they're safe and based on the same (flawed) pH theory without any danger.</p>
-                  </div>
-                </CardContent>
-              </Card>
-
               {/* Key Test */}
               <Card className="border-l-4 border-l-accent">
                 <CardHeader>
