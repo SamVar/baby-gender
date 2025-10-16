@@ -30,6 +30,7 @@ export default function Predict() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   const hasInputs = maleDOB && femaleDOB && 
     maleDOB.month && maleDOB.year && 
@@ -53,7 +54,11 @@ export default function Predict() {
   }
 
   const handleCalculate = () => {
-    setShowResults(true);
+    setIsCalculating(true);
+    setTimeout(() => {
+      setShowResults(true);
+      setIsCalculating(false);
+    }, 100);
   };
 
   const weightedProbability = results.length > 1
@@ -166,10 +171,18 @@ export default function Predict() {
               {hasInputs && (
                 <Button 
                   onClick={handleCalculate} 
-                  size="lg" 
+                  size="lg"
+                  disabled={isCalculating}
                   className="w-full mt-6"
                 >
-                  Calculate Prediction
+                  {isCalculating ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                      <span>Calculating...</span>
+                    </div>
+                  ) : (
+                    'Calculate Prediction'
+                  )}
                 </Button>
               )}
             </CardContent>

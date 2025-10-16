@@ -26,6 +26,7 @@ export default function Plan() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState<DateInput | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   // Apply gender from URL parameter on mount
   useEffect(() => {
@@ -63,7 +64,11 @@ export default function Plan() {
     : [];
 
   const handleCalculate = () => {
-    setShowResults(true);
+    setIsCalculating(true);
+    setTimeout(() => {
+      setShowResults(true);
+      setIsCalculating(false);
+    }, 100);
   };
 
   const handleMonthClick = (date: DateInput) => {
@@ -145,10 +150,18 @@ export default function Plan() {
               {hasInputs && (
                 <Button 
                   onClick={handleCalculate} 
-                  size="lg" 
+                  size="lg"
+                  disabled={isCalculating}
                   className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl md:hover:from-accent/90 md:hover:to-accent shadow-lg rounded-xl"
                 >
-                  Calculate Best Dates
+                  {isCalculating ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                      <span>Calculating...</span>
+                    </div>
+                  ) : (
+                    'Calculate Best Dates'
+                  )}
                 </Button>
               )}
             </CardContent>
