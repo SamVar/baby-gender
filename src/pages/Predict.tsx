@@ -86,7 +86,8 @@ export default function Predict() {
       
       <header className="container mx-auto px-4 py-6">
         <div className="text-center">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent flex items-center justify-center gap-3">
+            <Calendar className="h-8 w-8 md:h-10 md:w-10 text-primary" />
             Predict Mode
           </h1>
           <p className="text-sm text-muted-foreground">Estimate baby gender based on conception date</p>
