@@ -9,7 +9,7 @@ import { ProbabilityRing } from "@/components/ProbabilityRing";
 import { ResultBadge } from "@/components/ResultBadge";
 import { LabelBadge } from "@/components/LabelBadge";
 import { DetailsDrawer } from "@/components/DetailsDrawer";
-import { DateInput, Sex, planBestMonths, generateMonthRange, calculateMonthResult } from "@/lib/bloodFreshness";
+import { DateInput, Sex, planBestMonthsStrict, generateMonthRange, calculateMonthResult } from "@/lib/bloodFreshness";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
@@ -49,7 +49,12 @@ export default function Plan() {
   const hasInputs = maleDOB && femaleDOB && maleDOB.month && maleDOB.year && femaleDOB.month && femaleDOB.year;
   
   const topMonths = canCalculate && showResults
-    ? planBestMonths(maleDOB, femaleDOB, targetSex, startDate, endDate, 6)
+    ? planBestMonthsStrict(maleDOB, femaleDOB, targetSex, startDate, {
+        topN: 6,
+        minProbability: 0.65,
+        minDiff: 0.20,
+        maxYears: 15
+      })
     : [];
 
   const allMonths = canCalculate && showResults

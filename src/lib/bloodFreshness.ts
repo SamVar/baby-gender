@@ -211,6 +211,68 @@ export function planBestMonths(
 }
 
 /**
+ * Plan best months with strict filtering to ensure quality results
+ * Expands search window automatically to find topN months with good probabilities
+ */
+export function planBestMonthsStrict(
+  maleDOB: DateInput,
+  femaleDOB: DateInput,
+  targetSex: Sex,
+  startDate: DateInput,
+  options?: {
+    topN?: number;           // default 6
+    minProbability?: number; // default 0.65 (Good or better)
+    minDiff?: number;        // default 0.20 (avoid "Too Close to Call")
+    maxYears?: number;       // default 15
+  }
+): MonthResult[] {
+  const {
+    topN = 6,
+    minProbability = 0.65,
+    minDiff = 0.20,
+    maxYears = 15
+  } = options || {};
+
+  // Calculate end date based on maxYears
+  const endYear = startDate.year + maxYears;
+  const endDate: DateInput = {
+    year: endYear,
+    month: startDate.month
+  };
+
+  // Generate all months in the expanded window
+  const months = generateMonthRange(startDate, endDate);
+  
+  // Calculate results for all months
+  const results = months.map((date) =>
+    calculateMonthResult(maleDOB, femaleDOB, date, targetSex)
+  );
+
+  // Filter for quality results only
+  const filtered = results.filter((result) => {
+    const targetProb = result.probabilities[targetSex];
+    const probDiff = Math.abs(result.probabilities.boy - result.probabilities.girl);
+    
+    return targetProb >= minProbability && probDiff >= minDiff;
+  });
+
+  // Sort by target probability (desc), then by absolute score difference (desc), then by date (asc)
+  filtered.sort((a, b) => {
+    const probDiff = b.probabilities[targetSex] - a.probabilities[targetSex];
+    if (Math.abs(probDiff) > 0.001) return probDiff;
+
+    const diffA = Math.abs(a.scores.male - a.scores.female);
+    const diffB = Math.abs(b.scores.male - b.scores.female);
+    const absDiff = diffB - diffA;
+    if (Math.abs(absDiff) > 0.001) return absDiff;
+
+    return monthsSince(a.date, b.date);
+  });
+
+  return filtered.slice(0, topN);
+}
+
+/**
  * Calculate next peak date for a person
  */
 export function calculateNextPeak(
