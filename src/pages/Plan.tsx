@@ -36,10 +36,10 @@ export default function Plan() {
     }
   }, [searchParams]);
 
-  // Default window: next 36 months
+  // Default window: next 48 months
   const now = new Date();
   const startDate: DateInput = { year: now.getFullYear(), month: now.getMonth() + 1 };
-  const endYear = now.getFullYear() + 3;
+  const endYear = now.getFullYear() + 4;
   const endMonth = now.getMonth() + 1;
   const endDate: DateInput = {
     year: endYear + Math.floor(endMonth / 12),
