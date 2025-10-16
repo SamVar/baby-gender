@@ -68,7 +68,7 @@ export default function Plan() {
     setTimeout(() => {
       setShowResults(true);
       setIsCalculating(false);
-    }, 100);
+    }, 1000);
   };
 
   const handleMonthClick = (date: DateInput) => {

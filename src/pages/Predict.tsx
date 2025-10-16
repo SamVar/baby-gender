@@ -58,7 +58,7 @@ export default function Predict() {
     setTimeout(() => {
       setShowResults(true);
       setIsCalculating(false);
-    }, 100);
+    }, 1000);
   };
 
   const weightedProbability = results.length > 1
