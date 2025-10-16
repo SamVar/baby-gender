@@ -44,7 +44,7 @@ export default function About() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mt-6">
-                <div className="space-y-3 p-4 rounded-lg bg-boy/20 border border-boy/30">
+                <div className="space-y-3 p-4 rounded-lg bg-boy/15 border-2 border-boy/40">
                   <h3 className="font-semibold text-boy flex items-center gap-2">
                     <Baby className="h-4 w-4" />
                     Male Cycle
@@ -57,7 +57,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="space-y-3 p-4 rounded-lg bg-girl/20 border border-girl/30">
+                <div className="space-y-3 p-4 rounded-lg bg-girl/15 border-2 border-girl/40">
                   <h3 className="font-semibold text-girl flex items-center gap-2">
                     <Baby className="h-4 w-4" />
                     Female Cycle
