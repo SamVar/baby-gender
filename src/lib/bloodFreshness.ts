@@ -263,27 +263,26 @@ export function planBestMonthsStrict(
         return targetProb >= minProbability && probDiff >= minDiff;
       });
     
-    // Add this year's qualifying months
-    collectedResults.push(...yearResults);
+    // Add this year's qualifying months (but don't exceed topN)
+    const remainingSlots = topN - collectedResults.length;
+    const monthsToAdd = yearResults.slice(0, remainingSlots);
+    collectedResults.push(...monthsToAdd);
+    
+    // Break early if we've collected enough
+    if (collectedResults.length >= topN) {
+      break;
+    }
     
     // Move to next year
     currentYearOffset++;
   }
   
-  // Sort by target probability (desc), then by absolute score difference (desc), then by date (asc)
+  // Sort by date (chronological order - earliest first)
   collectedResults.sort((a, b) => {
-    const probDiff = b.probabilities[targetSex] - a.probabilities[targetSex];
-    if (Math.abs(probDiff) > 0.001) return probDiff;
-
-    const diffA = Math.abs(a.scores.male - a.scores.female);
-    const diffB = Math.abs(b.scores.male - b.scores.female);
-    const absDiff = diffB - diffA;
-    if (Math.abs(absDiff) > 0.001) return absDiff;
-
     return monthsSince(a.date, b.date);
   });
 
-  // Return exactly topN months (sorted by probability)
+  // Return exactly topN months (sorted by date)
   return collectedResults.slice(0, topN);
 }
 
