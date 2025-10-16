@@ -25,7 +25,7 @@ export interface MonthResult {
   scores: BloodScore;
   probabilities: Probability;
   label: 'Leans Boy' | 'Leans Girl' | 'Too Close to Call';
-  badge?: 'Best' | 'Great' | 'Good' | 'Close Call';
+  badge?: 'Best' | 'Great' | 'Good' | 'Fair' | 'Close Call';
 }
 
 const MALE_PERIOD = 48; // months
@@ -119,9 +119,10 @@ export function determineLabel(scores: BloodScore): MonthResult['label'] {
 export function determineBadge(
   probability: number
 ): MonthResult['badge'] | undefined {
-  if (probability >= 0.86) return 'Best';
+  if (probability >= 0.85) return 'Best';
   if (probability >= 0.75) return 'Great';
-  if (probability >= 0.65) return 'Good';
+  if (probability >= 0.68) return 'Good';
+  if (probability >= 0.60) return 'Fair';
   return 'Close Call';
 }
 
@@ -212,7 +213,8 @@ export function planBestMonths(
 
 /**
  * Plan best months with strict filtering to ensure quality results
- * Expands search window automatically to find topN months with good probabilities
+ * Searches year-by-year until topN qualifying months are found
+ * Only returns Best, Great, and Good months (minimum 68% probability)
  */
 export function planBestMonthsStrict(
   maleDOB: DateInput,
@@ -221,43 +223,55 @@ export function planBestMonthsStrict(
   startDate: DateInput,
   options?: {
     topN?: number;           // default 6
-    minProbability?: number; // default 0.65 (Good or better)
+    minProbability?: number; // default 0.68 (Good or better, excludes Fair)
     minDiff?: number;        // default 0.20 (avoid "Too Close to Call")
-    maxYears?: number;       // default 15
   }
 ): MonthResult[] {
   const {
     topN = 6,
-    minProbability = 0.65,
-    minDiff = 0.20,
-    maxYears = 15
+    minProbability = 0.68,
+    minDiff = 0.20
   } = options || {};
 
-  // Calculate end date based on maxYears
-  const endYear = startDate.year + maxYears;
-  const endDate: DateInput = {
-    year: endYear,
-    month: startDate.month
-  };
-
-  // Generate all months in the expanded window
-  const months = generateMonthRange(startDate, endDate);
+  let collectedResults: MonthResult[] = [];
+  let currentYearOffset = 0;
   
-  // Calculate results for all months
-  const results = months.map((date) =>
-    calculateMonthResult(maleDOB, femaleDOB, date, targetSex)
-  );
-
-  // Filter for quality results only
-  const filtered = results.filter((result) => {
-    const targetProb = result.probabilities[targetSex];
-    const probDiff = Math.abs(result.probabilities.boy - result.probabilities.girl);
+  // Search year by year until we have enough qualifying months
+  while (collectedResults.length < topN) {
+    // Calculate this year's date range (12 months)
+    const yearStartDate: DateInput = {
+      year: startDate.year + currentYearOffset,
+      month: startDate.month
+    };
     
-    return targetProb >= minProbability && probDiff >= minDiff;
-  });
-
+    const yearEndDate: DateInput = {
+      year: startDate.year + currentYearOffset + 1,
+      month: startDate.month === 1 ? 12 : startDate.month - 1
+    };
+    
+    // Generate months for just this year
+    const yearMonths = generateMonthRange(yearStartDate, yearEndDate);
+    
+    // Calculate and filter results for this year only
+    const yearResults = yearMonths
+      .map(date => calculateMonthResult(maleDOB, femaleDOB, date, targetSex))
+      .filter(result => {
+        const targetProb = result.probabilities[targetSex];
+        const probDiff = Math.abs(result.probabilities.boy - result.probabilities.girl);
+        
+        // Only accept Best, Great, or Good (excludes Fair and Close Call)
+        return targetProb >= minProbability && probDiff >= minDiff;
+      });
+    
+    // Add this year's qualifying months
+    collectedResults.push(...yearResults);
+    
+    // Move to next year
+    currentYearOffset++;
+  }
+  
   // Sort by target probability (desc), then by absolute score difference (desc), then by date (asc)
-  filtered.sort((a, b) => {
+  collectedResults.sort((a, b) => {
     const probDiff = b.probabilities[targetSex] - a.probabilities[targetSex];
     if (Math.abs(probDiff) > 0.001) return probDiff;
 
@@ -269,7 +283,8 @@ export function planBestMonthsStrict(
     return monthsSince(a.date, b.date);
   });
 
-  return filtered.slice(0, topN);
+  // Return exactly topN months (sorted by probability)
+  return collectedResults.slice(0, topN);
 }
 
 /**

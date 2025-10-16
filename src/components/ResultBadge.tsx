@@ -13,6 +13,7 @@ export function ResultBadge({ badge, className }: ResultBadgeProps) {
     Best: "bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20",
     Great: "bg-accent/10 text-accent border-accent/20",
     Good: "bg-primary/10 text-primary border-primary/20",
+    Fair: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
     "Close Call": "bg-muted text-muted-foreground border-border",
   };
 

@@ -51,9 +51,8 @@ export default function Plan() {
   const topMonths = canCalculate && showResults
     ? planBestMonthsStrict(maleDOB, femaleDOB, targetSex, startDate, {
         topN: 6,
-        minProbability: 0.65,
-        minDiff: 0.20,
-        maxYears: 15
+        minProbability: 0.68,
+        minDiff: 0.20
       })
     : [];
 
