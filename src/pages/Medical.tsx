@@ -1,66 +1,45 @@
 import { Navigation } from "@/components/Navigation";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Stethoscope } from "lucide-react";
+import Header from "@/components/medical/Header";
+import DevelopmentTimeline from "@/components/medical/DevelopmentTimeline";
+import TestingMethods from "@/components/medical/TestingMethods";
+import QuestionsForProvider from "@/components/medical/QuestionsForProvider";
+import ConditionsAndVariations from "@/components/medical/ConditionsAndVariations";
+import MedicalMyths from "@/components/medical/MedicalMyths";
+import CareTimeline from "@/components/medical/CareTimeline";
+import WhenToCall from "@/components/medical/WhenToCall";
+import Resources from "@/components/medical/Resources";
+import Disclaimer from "@/components/medical/Disclaimer";
+import { Seo } from "@/components/Seo";
 
 export default function Medical() {
+  const canonical = `${window.location.origin}/medical`;
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center space-y-4 mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-              <Stethoscope className="h-8 w-8 text-accent" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              Medical Information 🏥
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Professional medical perspective and advice on gender determination
-            </p>
-          </div>
+      <Seo
+        title="Medical Information | Prenatal Sex Determination"
+        description="Evidence-based overview of ultrasound, NIPT, and diagnostic tests for fetal sex determination, with timelines and questions for your provider."
+        canonical={canonical}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "MedicalWebPage",
+          name: "Medical Information | Prenatal Sex Determination",
+          about: "Prenatal sex determination methods and timing",
+        }}
+      />
 
-          {/* Coming Soon Card */}
-          <Card className="border-2 border-accent/30">
-            <CardHeader>
-              <CardTitle>Content Coming Soon</CardTitle>
-              <CardDescription>
-                We're gathering professional medical information about gender determination during pregnancy.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                This page will soon feature detailed information about:
-              </p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                  Timeline of detection methods and accuracy by gestational week
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                  Important prenatal tests and what they reveal
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                  Questions to ask your healthcare provider
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-                  Expert quotes from OB-GYNs and pediatricians
-                </li>
-              </ul>
-              <div className="pt-4">
-                <Button asChild className="bg-accent hover:bg-accent/90">
-                  <Link to="/about">Learn About Our Method</Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+      <Navigation />
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-6xl mx-auto space-y-12">
+          <Header />
+          <DevelopmentTimeline />
+          <TestingMethods />
+          <QuestionsForProvider />
+          <ConditionsAndVariations />
+          <MedicalMyths />
+          <CareTimeline />
+          <WhenToCall />
+          <Resources />
+          <Disclaimer />
         </div>
       </main>
     </div>
