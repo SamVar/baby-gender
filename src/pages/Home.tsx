@@ -13,7 +13,7 @@ export default function Home() {
   const [isGirlHovered, setIsGirlHovered] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
       <header className="container mx-auto px-4 py-8 pt-24 relative">
         <Button variant="ghost" size="icon" asChild className="absolute top-8 right-4">
           <Link to="/about" aria-label="About">

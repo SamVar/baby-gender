@@ -173,7 +173,7 @@ export default function Predict() {
                   onClick={handleCalculate} 
                   size="lg"
                   disabled={isCalculating}
-                  className="w-full mt-6"
+                  className="w-full bg-gradient-to-r from-accent to-accent/90 text-accent-foreground transition-all duration-500 md:hover:scale-105 md:hover:shadow-2xl md:hover:from-accent/90 md:hover:to-accent shadow-lg rounded-xl mt-6"
                 >
                   {isCalculating ? (
                     <div className="flex items-center gap-2">
@@ -253,7 +253,11 @@ export default function Predict() {
                           <button
                             key={`${result.date.year}-${result.date.month}`}
                             onClick={() => handleMonthClick(result.date)}
-                            className="text-left p-4 rounded-lg border-2 hover:border-primary transition-all hover:shadow-md"
+                            className={`text-left p-4 rounded-lg border-2 transition-all cursor-pointer hover:shadow-md ${
+                              result.probabilities.boy >= 0.7 ? "border-boy/60 hover:border-boy" :
+                              result.probabilities.girl >= 0.7 ? "border-girl/60 hover:border-girl" :
+                              "border-border hover:border-primary"
+                            }`}
                           >
                             <p className="font-semibold mb-2">
                               {MONTH_NAMES[result.date.month - 1]} {result.date.year}
