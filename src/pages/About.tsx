@@ -25,7 +25,7 @@ export default function About() {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-12">
           {/* Disclaimer moved to footer */}
 
           <Card>
@@ -44,7 +44,7 @@ export default function About() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mt-6">
-                <div className="space-y-3 p-4 rounded-lg bg-boy/5 border border-boy/20">
+                <div className="space-y-3 p-4 rounded-lg bg-boy/20 border border-boy/30">
                   <h3 className="font-semibold text-boy flex items-center gap-2">
                     <Baby className="h-4 w-4" />
                     Male Cycle
@@ -57,7 +57,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="space-y-3 p-4 rounded-lg bg-girl/5 border border-girl/20">
+                <div className="space-y-3 p-4 rounded-lg bg-girl/20 border border-girl/30">
                   <h3 className="font-semibold text-girl flex items-center gap-2">
                     <Baby className="h-4 w-4" />
                     Female Cycle
@@ -171,17 +171,21 @@ export default function About() {
           </Card>
 
           <div className="flex justify-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" variant="default">
               <Link to="/plan">Try Plan Mode</Link>
             </Button>
-            <Button asChild size="lg" variant="secondary">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-gradient-to-r from-accent to-accent/90 text-accent-foreground hover:from-accent/90 hover:to-accent"
+            >
               <Link to="/predict">Try Predict Mode</Link>
             </Button>
           </div>
         </div>
       </main>
       
-      <footer className="mt-auto container mx-auto px-4 pb-8">
+      <footer className="mt-24 container mx-auto px-4 pb-8">
         <div className="max-w-2xl mx-auto">
           <Card className="border-muted-foreground/20 bg-muted/30">
             <CardContent className="pt-6">
