@@ -119,9 +119,9 @@ export function determineLabel(scores: BloodScore): MonthResult['label'] {
 export function determineBadge(
   probability: number
 ): MonthResult['badge'] | undefined {
-  if (probability >= 0.90) return 'Best';
-  if (probability >= 0.80) return 'Great';
-  if (probability >= 0.70) return 'Good';
+  if (probability >= 0.86) return 'Best';
+  if (probability >= 0.75) return 'Great';
+  if (probability >= 0.65) return 'Good';
   return 'Close Call';
 }
 
