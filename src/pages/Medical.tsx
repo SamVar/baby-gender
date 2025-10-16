@@ -45,7 +45,7 @@ export default function Medical() {
 
         {/* Section 1: Pregnancy Care Timeline */}
         <section className="bg-secondary/10">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Pregnancy Care Timeline"
@@ -60,7 +60,7 @@ export default function Medical() {
 
         {/* Section 2: Prenatal Development Timeline */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Prenatal Development Timeline"
@@ -75,7 +75,7 @@ export default function Medical() {
 
         {/* Section 3: Testing Methods */}
         <section className="bg-muted/30">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Testing Methods"
@@ -90,7 +90,7 @@ export default function Medical() {
 
         {/* Section 4: Test Comparison */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Test Comparison"
@@ -104,7 +104,7 @@ export default function Medical() {
 
         {/* Section 5: Understanding Results */}
         <section className="bg-secondary/10">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Understanding Your Results"
@@ -119,7 +119,7 @@ export default function Medical() {
 
         {/* Section 6: Questions for Provider */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Questions for Your Provider"
@@ -134,7 +134,7 @@ export default function Medical() {
 
         {/* Section 7: Special Situations */}
         <section className="bg-muted/30">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Special Situations & Variations"
@@ -149,7 +149,7 @@ export default function Medical() {
 
         {/* Section 8: Common Myths */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Common Myths"
@@ -163,7 +163,7 @@ export default function Medical() {
 
         {/* Section 9: Clinical Perspective */}
         <section className="bg-secondary/10">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Clinical Perspective"
@@ -178,7 +178,7 @@ export default function Medical() {
 
         {/* Section 10: When to Call & Resources */}
         <section className="bg-background">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-16 lg:py-24">
             <div className="max-w-6xl mx-auto">
               <SectionHeader 
                 title="Support & Resources"

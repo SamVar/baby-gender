@@ -13,6 +13,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Baby, ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
 
@@ -149,20 +155,21 @@ export function Navigation() {
           {/* Mobile Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm">
-                <Menu className="h-5 w-5" />
+              <Button variant="ghost" size="icon">
+                <Menu className="h-7 w-7" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
-                <SheetTitle className="flex items-center gap-2">
-                  <Baby className="h-5 w-5 text-primary" />
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] overflow-y-auto">
+              <SheetHeader className="mb-6">
+                <SheetTitle className="flex items-center gap-2 text-lg">
+                  <Baby className="h-6 w-6 text-primary" />
                   Menu
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex flex-col gap-3">
                 <Button
                   variant={isActive("/plan") ? "secondary" : "ghost"}
+                  className="justify-start text-base h-11"
                   asChild
                   onClick={() => setOpen(false)}
                 >
@@ -171,53 +178,64 @@ export function Navigation() {
 
                 <Button
                   variant={isActive("/predict") ? "secondary" : "ghost"}
+                  className="justify-start text-base h-11"
                   asChild
                   onClick={() => setOpen(false)}
                 >
                   <Link to="/predict">Predict</Link>
                 </Button>
 
-                <div className="border-t border-border pt-4 mt-2">
-                  <p className="text-sm font-semibold text-muted-foreground mb-3 px-2">Learn</p>
-                  <div className="flex flex-col gap-2">
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/myths">🔮 Myths & Tales</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/science">🔬 Science & Statistics</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/medical">🏥 Medical Information</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/culture">🌍 Cultural Perspectives</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/lifestyle">🥗 Nutrition & Lifestyle</Link>
-                    </Button>
-                  </div>
-                </div>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="learn" className="border-b-0">
+                    <AccordionTrigger className="py-3 px-4 hover:bg-muted/50 rounded-md hover:no-underline">
+                      <span className="text-base font-medium">Learn</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2">
+                      <div className="flex flex-col gap-1 pl-2">
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/myths">🔮 Myths & Tales</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/science">🔬 Science & Statistics</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/medical">🏥 Medical Information</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/culture">🌍 Cultural Perspectives</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/lifestyle">🥗 Nutrition & Lifestyle</Link>
+                        </Button>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
 
-                <div className="border-t border-border pt-4 mt-2">
-                  <p className="text-sm font-semibold text-muted-foreground mb-3 px-2">Resources</p>
-                  <div className="flex flex-col gap-2">
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/stories">💬 Stories & Community</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/resources">🔧 Tools & Calculators</Link>
-                    </Button>
-                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
-                      <Link to="/faq">❓ FAQ</Link>
-                    </Button>
-                  </div>
-                </div>
+                  <AccordionItem value="resources" className="border-b-0">
+                    <AccordionTrigger className="py-3 px-4 hover:bg-muted/50 rounded-md hover:no-underline">
+                      <span className="text-base font-medium">Resources</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2">
+                      <div className="flex flex-col gap-1 pl-2">
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/stories">💬 Stories & Community</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/resources">🔧 Tools & Calculators</Link>
+                        </Button>
+                        <Button variant="ghost" className="justify-start text-sm h-10" asChild onClick={() => setOpen(false)}>
+                          <Link to="/faq">❓ FAQ</Link>
+                        </Button>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
 
                 <Button
                   variant={isActive("/about") ? "secondary" : "ghost"}
+                  className="justify-start text-base h-11"
                   asChild
                   onClick={() => setOpen(false)}
-                  className="mt-2"
                 >
                   <Link to="/about">About</Link>
                 </Button>
