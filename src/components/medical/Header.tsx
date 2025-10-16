@@ -14,7 +14,7 @@ export default function Header() {
         Evidence-based guidance on when and how fetal sex is determined in clinical care.
       </p>
 
-      <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         <Card className="border-2 border-green-500/30 hover:border-green-500/50 hover:shadow-lg transition-all">
           <CardHeader className="pb-3">
             <CardTitle className="text-lg font-bold">Earliest Accurate Screening</CardTitle>

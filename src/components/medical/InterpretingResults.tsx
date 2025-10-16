@@ -7,12 +7,12 @@ export default function InterpretingResults() {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Quick overview section */}
-      <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-6">
-        <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+      <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-bold mb-3 flex items-center gap-2">
           <HelpCircle className="h-5 w-5 text-blue-600" />
           Understanding Your Results: Quick Overview
         </h3>
-        <div className="grid md:grid-cols-2 gap-4 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
           <div>
             <p className="font-semibold text-foreground mb-1">Screening Tests (NIPT, Ultrasound)</p>
             <p className="text-muted-foreground">Provide probability or likelihood—not a diagnosis. High accuracy but not 100% definitive.</p>
@@ -25,10 +25,10 @@ export default function InterpretingResults() {
       </div>
 
       <Tabs defaultValue="communication" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3">
-          <TabsTrigger value="communication">How Results Come</TabsTrigger>
-          <TabsTrigger value="screening">Screening vs Diagnostic</TabsTrigger>
-          <TabsTrigger value="concerns">When Issues Arise</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 h-auto">
+          <TabsTrigger value="communication" className="text-xs sm:text-sm">How Results Come</TabsTrigger>
+          <TabsTrigger value="screening" className="text-xs sm:text-sm">Screening vs Diagnostic</TabsTrigger>
+          <TabsTrigger value="concerns" className="text-xs sm:text-sm">When Issues Arise</TabsTrigger>
         </TabsList>
 
         <TabsContent value="communication" className="space-y-6 mt-6">

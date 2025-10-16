@@ -5,8 +5,8 @@ import { CheckCircle2, Clock, DollarSign, Shield } from "lucide-react";
 export default function TestComparison() {
   return (
     <div className="space-y-4 animate-fade-in">
-      <div className="overflow-x-auto">
-        <Table>
+      <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+        <Table className="min-w-[800px]">
           <TableHeader>
             <TableRow>
               <TableHead className="w-[180px]">Test</TableHead>

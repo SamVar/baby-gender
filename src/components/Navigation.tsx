@@ -6,10 +6,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Baby, ChevronDown } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Baby, ChevronDown, Menu } from "lucide-react";
+import { useState } from "react";
 
 export function Navigation() {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -25,8 +34,8 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Navigation Links */}
-          <div className="flex items-center gap-1">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-1">
             {/* Plan */}
             <Button
               variant={isActive("/plan") ? "secondary" : "ghost"}
@@ -136,6 +145,85 @@ export function Navigation() {
               <Link to="/about">About</Link>
             </Button>
           </div>
+
+          {/* Mobile Menu */}
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="sm">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader>
+                <SheetTitle className="flex items-center gap-2">
+                  <Baby className="h-5 w-5 text-primary" />
+                  Menu
+                </SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-4 mt-8">
+                <Button
+                  variant={isActive("/plan") ? "secondary" : "ghost"}
+                  asChild
+                  onClick={() => setOpen(false)}
+                >
+                  <Link to="/plan">Plan</Link>
+                </Button>
+
+                <Button
+                  variant={isActive("/predict") ? "secondary" : "ghost"}
+                  asChild
+                  onClick={() => setOpen(false)}
+                >
+                  <Link to="/predict">Predict</Link>
+                </Button>
+
+                <div className="border-t border-border pt-4 mt-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-3 px-2">Learn</p>
+                  <div className="flex flex-col gap-2">
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/myths">🔮 Myths & Tales</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/science">🔬 Science & Statistics</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/medical">🏥 Medical Information</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/culture">🌍 Cultural Perspectives</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/lifestyle">🥗 Nutrition & Lifestyle</Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="border-t border-border pt-4 mt-2">
+                  <p className="text-sm font-semibold text-muted-foreground mb-3 px-2">Resources</p>
+                  <div className="flex flex-col gap-2">
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/stories">💬 Stories & Community</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/resources">🔧 Tools & Calculators</Link>
+                    </Button>
+                    <Button variant="ghost" className="justify-start" asChild onClick={() => setOpen(false)}>
+                      <Link to="/faq">❓ FAQ</Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <Button
+                  variant={isActive("/about") ? "secondary" : "ghost"}
+                  asChild
+                  onClick={() => setOpen(false)}
+                  className="mt-2"
+                >
+                  <Link to="/about">About</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>

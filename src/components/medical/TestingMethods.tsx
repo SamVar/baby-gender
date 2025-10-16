@@ -18,7 +18,7 @@ export default function TestingMethods() {
         ]}
       />
       
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
         <Card className="border-2 border-blue-500/30 hover:border-blue-500/50 hover:shadow-lg transition-all">
           <CardHeader>
             <div className="flex items-center justify-between">

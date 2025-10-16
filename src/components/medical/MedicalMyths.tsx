@@ -4,8 +4,8 @@ import { XCircle } from "lucide-react";
 export default function MedicalMyths() {
   return (
     <div className="space-y-8 animate-fade-in">
-      <div className="bg-gradient-to-br from-amber-500/10 to-red-500/10 border border-amber-500/20 rounded-lg p-6">
-        <h3 className="text-lg font-bold mb-2 flex items-center gap-2">
+      <div className="bg-gradient-to-br from-amber-500/10 to-red-500/10 border border-amber-500/20 rounded-lg p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-bold mb-2 flex items-center gap-2">
           <XCircle className="h-5 w-5 text-red-600" />
           Debunking Common Myths
         </h3>
@@ -14,7 +14,7 @@ export default function MedicalMyths() {
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
@@ -130,7 +130,7 @@ export default function MedicalMyths() {
         </Card>
       </div>
       
-      <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-l-4 border-l-amber-500 rounded-r-lg p-6">
+      <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-l-4 border-l-amber-500 rounded-r-lg p-4 sm:p-6">
         <p className="font-semibold text-foreground mb-2">💡 Bottom line:</p>
         <p className="text-sm text-muted-foreground">These methods can be fun for entertainment, but they have no scientific validity. If you want to know your baby's sex reliably, ultrasound (18-22 weeks), NIPT (10+ weeks), or diagnostic testing are your only proven options.</p>
       </div>

@@ -4,14 +4,14 @@ import { MessageSquare } from "lucide-react";
 export default function QuestionsForProvider() {
   return (
     <div className="space-y-8 animate-fade-in">
-      <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-lg p-6">
-        <h3 className="text-lg font-bold mb-2">Preparing for Your Appointment</h3>
+      <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-lg p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-bold mb-2">Preparing for Your Appointment</h3>
         <p className="text-sm text-muted-foreground">
           These questions can help you have productive conversations with your healthcare provider about prenatal testing and sex determination. Feel free to bring this list to your appointments.
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
