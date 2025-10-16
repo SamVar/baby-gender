@@ -2,9 +2,12 @@ import { Navigation } from "@/components/Navigation";
 import Header from "@/components/medical/Header";
 import DevelopmentTimeline from "@/components/medical/DevelopmentTimeline";
 import TestingMethods from "@/components/medical/TestingMethods";
+import TestComparison from "@/components/medical/TestComparison";
 import QuestionsForProvider from "@/components/medical/QuestionsForProvider";
 import ConditionsAndVariations from "@/components/medical/ConditionsAndVariations";
+import InterpretingResults from "@/components/medical/InterpretingResults";
 import MedicalMyths from "@/components/medical/MedicalMyths";
+import ClinicalPerspective from "@/components/medical/ClinicalPerspective";
 import CareTimeline from "@/components/medical/CareTimeline";
 import WhenToCall from "@/components/medical/WhenToCall";
 import Resources from "@/components/medical/Resources";
@@ -33,9 +36,12 @@ export default function Medical() {
           <Header />
           <DevelopmentTimeline />
           <TestingMethods />
+          <TestComparison />
+          <InterpretingResults />
           <QuestionsForProvider />
           <ConditionsAndVariations />
           <MedicalMyths />
+          <ClinicalPerspective />
           <CareTimeline />
           <WhenToCall />
           <Resources />
