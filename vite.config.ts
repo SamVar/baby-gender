@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  //Added during githiub pages
   base: "/baby-gender/",
   server: {
     host: "::",
